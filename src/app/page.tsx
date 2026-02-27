@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { landingPages } from '@/data/lps';
 import Hero from '@/components/Hero';
+import Clients from '@/components/Clients';
 
 /**
  * Metadata SEO para a página Home
@@ -57,7 +58,7 @@ export default function Home() {
         </nav>
       </header> */}
 
-      {/* Hero Section */}
+      {/* Hero Section
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -92,12 +93,14 @@ export default function Home() {
                 <div className="text-8xl">🎁</div>
               </div>
               {/* Elementos decorativos */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full blur-2xl opacity-50"></div>
+              {/* <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400 rounded-full blur-2xl opacity-50"></div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-400 rounded-full blur-2xl opacity-50"></div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <Clients />
 
       {/* Benefícios Section */}
       <section id="beneficios" className="py-20 px-4 bg-white">
