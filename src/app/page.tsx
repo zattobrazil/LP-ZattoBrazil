@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { landingPages } from '@/data/lps';
+import Hero from '@/components/Hero';
 
 /**
  * Metadata SEO para a página Home
@@ -26,7 +27,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Header / Navegação */}
-      <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-sm z-50">
+      <Hero />
+      {/* <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-sm z-50">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
@@ -53,7 +55,7 @@ export default function Home() {
             </a>
           </div>
         </nav>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">
