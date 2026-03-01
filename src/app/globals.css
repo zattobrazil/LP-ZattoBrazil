@@ -28,7 +28,7 @@
   }
 
   *:focus-visible {
-    @apply outline-2 outline-offset-2 outline-blue-600;
+    @apply outline-2 outline-offset-2 outline-gray-900;
   }
 }
 
@@ -48,7 +48,7 @@
 
   /* Gradiente de texto */
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent;
   }
 
   /* Card com hover effect */

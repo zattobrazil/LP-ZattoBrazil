@@ -48,7 +48,7 @@ export default function Hero({
         </p>
 
         {/* Botão CTA */}
-        <button className="bg-white text-[#585936] font-bold px-9 py-4 uppercase rounded-xl hover:opacity-90 transition-opacity">
+        <button className="bg-transparent border border-1 border-white text-white font-bold px-9 py-4 uppercase rounded-xl hover:scale-105 transition-transform">
           {ctaText}
         </button>
       </div>

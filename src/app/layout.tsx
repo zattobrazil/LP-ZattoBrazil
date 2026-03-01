@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import './globals.css';
 
 /**
- * Configuração da fonte Inter do Google Fonts
+ * Configuração da fonte Montserrat do Google Fonts
  */
-const inter = Inter({ 
+const montserrat = Montserrat({ 
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-montserrat',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 /**
@@ -77,8 +78,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={inter.variable}>
-      <body className={`${inter.className} antialiased`}>
+    <html lang="pt-BR" className={montserrat.variable}>
+      <body className={`${montserrat.className} antialiased`}>
         {children}
       </body>
     </html>
