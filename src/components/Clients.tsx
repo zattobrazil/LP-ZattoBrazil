@@ -1,43 +1,32 @@
 import Image from 'next/image';
 
-/**
- * Interface de Props do Clients Component
- */
-interface ClientsProps {
-  title?: string;
-  logosImage?: string;
-}
+const clients = [
+  { name: 'Hyundai AutoEver Brasil', src: '/images/cliente-hyundai.webp' },
+  { name: 'Bermudes', src: '/images/cliente-bermudes.webp' },
+  { name: 'Ollie', src: '/images/cliente-ollie.webp' },
+  { name: 'CPFL', src: '/images/cliente-cpfl.webp' },
+  { name: 'Baltieri', src: '/images/cliente-baltieri.webp' },
+  { name: 'Octapharma', src: '/images/cliente-octapharma.webp' },
+];
 
-/**
- * Clients Component - Seção de Logos dos Clientes
- * 
- * Componente que exibe os logos dos clientes em uma seção limpa e centralizada.
- * A imagem dos logos possui efeito de hover para um toque premium.
- * 
- * @param title - Título da seção
- * @param logosImage - Caminho da imagem com os logos dos clientes
- */
-export default function Clients({
-  title = 'NOSSOS CLIENTES',
-  logosImage = '/images/clientes.png',
-}: ClientsProps) {
+export default function Clients() {
   return (
-    <section className="bg-white py-12 md:py-16 flex flex-col items-center">
-      {/* Título */}
-      <h2 className="text-[#585936] font-bold text-xl tracking-[0.2em] uppercase mb-8 md:mb-10 text-center">
-        {title}
+    <section className="bg-[#fcf9f4] py-16">
+      <h2 className="font-serif text-2xl tracking-tight text-[#213655] text-center mb-12">
+        NOSSOS CLIENTES
       </h2>
 
-      {/* Container da Imagem */}
-      <div className="w-full max-w-5xl px-4">
-        <Image
-          src={logosImage}
-          alt="Logos dos nossos clientes"
-          width={1200}
-          height={400}
-          className="w-full h-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
-          priority={false}
-        />
+      <div className="flex flex-row flex-wrap justify-center gap-12 px-6">
+        {clients.map((client) => (
+          <Image
+            key={client.src}
+            src={client.src}
+            alt={`Logo do cliente ${client.name}`}
+            width={130}
+            height={60}
+            className="object-contain"
+          />
+        ))}
       </div>
     </section>
   );

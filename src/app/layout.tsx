@@ -1,15 +1,27 @@
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 
-/**
- * Configuração da fonte Montserrat do Google Fonts
- */
-const montserrat = Montserrat({ 
-  subsets: ['latin'],
+const helveticaNow = localFont({
+  src: [
+    {
+      path: '../../public/fonts/HelveticaNow-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/HelveticaNow-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/HelveticaNow-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-helvetica-now',
   display: 'swap',
-  variable: '--font-montserrat',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 /**
@@ -78,8 +90,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={montserrat.variable}>
-      <body className={`${montserrat.className} antialiased`}>
+    <html lang="pt-BR" className={helveticaNow.variable}>
+      <body className={`${helveticaNow.className} bg-[#fcf9f4] text-[#213655] antialiased`}>
         {children}
       </body>
     </html>
