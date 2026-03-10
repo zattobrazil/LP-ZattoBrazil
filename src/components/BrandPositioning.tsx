@@ -7,7 +7,7 @@ export default function BrandPositioning() {
       <div className="bg-[#213655] text-white flex flex-col justify-center p-12 lg:p-24 lg:py-40">
         <p className="font-sans text-lg md:text-xl mb-1">não vendemos</p>
         
-        <h2 className="font-serif text-4xl lg:text-5xl tracking-tight mb-8">
+        <h2 className="font-serif text-4xl lg:text-5xl tracking-tight mb-8 line-through">
           BRINDES CORPORATIVOS
         </h2>
         
@@ -24,7 +24,7 @@ export default function BrandPositioning() {
           src="/images/posicionamento.webp"
           alt="Bastidores de produção Zatto"
           fill
-          className="object-cover"
+          className="object-cover object-[center_35%] grayscale"
         />
       </div>
     </section>

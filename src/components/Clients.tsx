@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
 const clients = [
-  { name: 'Hyundai AutoEver Brasil', src: '/images/cliente-hyundai.webp' },
+  { name: 'Hyundai AutoEver Brasil', src: '/images/cliente-hyundai.webp', small: true },
   { name: 'Bermudes', src: '/images/cliente-bermudes.webp' },
-  { name: 'Ollie', src: '/images/cliente-ollie.webp' },
-  { name: 'CPFL', src: '/images/cliente-cpfl.webp' },
-  { name: 'Baltieri', src: '/images/cliente-baltieri.webp' },
   { name: 'Octapharma', src: '/images/cliente-octapharma.webp' },
+  { name: 'CPFL', src: '/images/cliente-cpfl.webp', small: true },
+  { name: 'Aegea', src: '/images/cliente-aegea.webp' },
+  { name: 'Ollie', src: '/images/cliente-ollie.webp', small: true },
 ];
 
 export default function Clients() {
@@ -22,8 +22,8 @@ export default function Clients() {
             key={client.src}
             src={client.src}
             alt={`Logo do cliente ${client.name}`}
-            width={130}
-            height={60}
+            width={client.small ? 80 : 180}
+            height={client.small ? 80 : 100}
             className="object-contain"
           />
         ))}
