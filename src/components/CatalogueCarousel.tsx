@@ -75,6 +75,7 @@ export default function CatalogueCarousel() {
           <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
         </svg>
       </button>
+      <div className="w-full h-14 bg-[#9c8973]"></div>
     </section>
   );
 }

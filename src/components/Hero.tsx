@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-screen">
       <Image
-        src="/images/hero-section.png"
+        src="/images/hero-section.webp"
         alt="Hero Zatto Brazil"
         fill
         priority

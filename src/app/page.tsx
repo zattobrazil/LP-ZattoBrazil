@@ -3,15 +3,23 @@ import Hero from '@/components/Hero';
 import BannerCTA from '@/components/BannerCTA';
 import Clients from '@/components/Clients';
 import CatalogueCarousel from '@/components/CatalogueCarousel';
+import BrandPositioning from '@/components/BrandPositioning';
+import Journey from '@/components/Journey';
+import Stats from '@/components/Stats';
+import FifteenYears from '@/components/FifteenYears';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-[#fcf9f4] text-white">
       <Header />
       <Hero />
       <BannerCTA />
       <Clients />
       <CatalogueCarousel />
+      <Journey />
+      <BrandPositioning />
+      <Stats />
+      <FifteenYears />
     </main>
   );
 }
