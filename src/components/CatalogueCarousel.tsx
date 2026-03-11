@@ -27,13 +27,13 @@ export default function CatalogueCarousel() {
           {slides.map((src, index) => (
             <div
               key={`${src}-${index}`}
-              className="flex-[0_0_100%] md:flex-[0_0_25%] min-w-0 relative aspect-[3/4]"
+              className="flex-[0_0_100%] md:flex-[0_0_25%] min-w-0 relative aspect-[3/4] overflow-hidden group"
             >
               <Image
                 src={src}
                 alt={`Catálogo Zatto Brazil ${(index % images.length) + 1}`}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
           ))}

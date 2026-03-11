@@ -9,7 +9,7 @@ export default function BannerCTA() {
         Do conceito à entrega, transformamos brindes corporativos em experiências de marca.
       </p>
 
-      <button className="bg-white text-[#213655] font-bold text-sm uppercase px-8 py-3">
+      <button className="bg-white text-[#213655] font-bold text-sm uppercase px-8 py-3 cursor-pointer select-none">
         FAÇA UM ORÇAMENTO
       </button>
     </section>

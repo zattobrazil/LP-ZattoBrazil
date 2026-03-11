@@ -22,7 +22,7 @@ export default function FifteenYears() {
           <h2 className="font-serif text-white text-4xl md:text-5xl lg:text-5xl leading-tight">
             15 ANOS<br />PRODUZINDO<br />BRINDES E<br />IMPULSIONADORES
           </h2>
-          <button className="bg-white text-[#213655] font-bold text-xl uppercase px-8 py-3">
+          <button className="bg-white text-[#213655] font-bold text-xl uppercase px-8 py-3 cursor-pointer select-none">
             CONHECER CATÁLOGO
           </button>
         </div>

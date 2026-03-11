@@ -26,7 +26,7 @@ export default function InstagramSection() {
               href={post.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative w-full aspect-[4/5] overflow-hidden group block"
+              className="relative w-full aspect-[4/5] overflow-hidden group block cursor-pointer"
             >
               <Image
                 src={post.image}

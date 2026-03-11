@@ -91,7 +91,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={helveticaNow.variable}>
-      <body className={`${helveticaNow.className} bg-[#fcf9f4] text-[#213655] antialiased`}>
+      <body className={`${helveticaNow.className} bg-[#fcf9f4] text-[#213655] antialiased cursor-default`}>
         {children}
       </body>
     </html>

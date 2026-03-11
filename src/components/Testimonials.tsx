@@ -125,7 +125,7 @@ export default function Testimonials() {
                   className="flex-[0_0_85%] md:flex-[0_0_45%] min-w-0 mr-6"
                 >
                   {/* Card de Depoimento */}
-                  <div className="bg-[#fcf9f4] rounded-2xl p-8 text-[#213655] h-full flex flex-col">
+                  <div className="bg-[#fcf9f4] rounded-2xl p-8 text-[#213655] h-full flex flex-col select-none">
                     {/* Topo: Saudação e Estrelas */}
                     <div className="flex justify-between items-start mb-4">
                       <span className="text-2xl font-medium">{testimonial.greeting}</span>

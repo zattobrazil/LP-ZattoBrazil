@@ -57,7 +57,7 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 bg-[#fcf9f4] flex items-center justify-between px-6 py-6 md:px-12 lg:px-16 transition-shadow duration-300 ${scrolled ? 'shadow-md' : 'shadow-none'}`}>
-      <Link href="/">
+      <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="cursor-pointer select-none">
         <Image
           src="/images/logo-zatto.webp"
           alt="Zatto Brazil"
@@ -65,7 +65,7 @@ export default function Header() {
           height={40}
           priority
         />
-      </Link>
+      </button>
 
       <nav>
         <ul className="hidden md:flex flex-row items-center gap-6 lg:gap-20">
