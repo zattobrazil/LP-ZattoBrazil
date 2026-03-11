@@ -9,6 +9,7 @@ import Stats from '@/components/Stats';
 import FifteenYears from '@/components/FifteenYears';
 import Testimonials from '@/components/Testimonials';
 import InstagramSection from '@/components/InstagramSection';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <FifteenYears />
       <Testimonials />
       <InstagramSection />
+      <Footer />
     </main>
   );
 }
