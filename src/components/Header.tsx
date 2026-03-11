@@ -12,7 +12,7 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#fcf9f4] flex items-center justify-between px-6 py-8 md:px-12 lg:px-16">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#fcf9f4] flex items-center justify-between px-6 py-8 md:px-12 lg:px-16 shadow-md">
       <Link href="/">
         <Image
           src="/images/logo-zatto.webp"
@@ -24,12 +24,12 @@ export default function Header() {
       </Link>
 
       <nav>
-        <ul className="hidden md:flex flex-row items-center gap-6 lg:gap-10">
+        <ul className="hidden md:flex flex-row items-center gap-6 lg:gap-20">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="font-sans text-[10px] lg:text-xl uppercase tracking-wide text-[#213655] hover:opacity-70 transition-opacity"
+                className="font-sans text-[10px] lg:text-lg uppercase tracking-wide text-[#213655] hover:opacity-70 transition-opacity"
               >
                 {link.label}
               </Link>

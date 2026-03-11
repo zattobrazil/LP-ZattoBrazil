@@ -7,6 +7,8 @@ import BrandPositioning from '@/components/BrandPositioning';
 import Journey from '@/components/Journey';
 import Stats from '@/components/Stats';
 import FifteenYears from '@/components/FifteenYears';
+import Testimonials from '@/components/Testimonials';
+import InstagramSection from '@/components/InstagramSection';
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <BrandPositioning />
       <Stats />
       <FifteenYears />
+      <Testimonials />
+      <InstagramSection />
     </main>
   );
 }

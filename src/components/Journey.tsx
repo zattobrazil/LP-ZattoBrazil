@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Journey() {
   return (
-    <section className="relative bg-[#fcf9f4] pt-0 pb-0 md:py-20">
+    <section className="relative bg-[#fcf9f4] pt-0 pb-0 md:py-14">
 
       {/* Container principal de conteúdo */}
       <div className="relative max-w-7xl mx-auto overflow-hidden aspect-[21/9]">
@@ -16,18 +16,18 @@ export default function Journey() {
         />
 
         {/* Título no canto superior direito */}
-        <div className="absolute top-16 right-4 md:top-24 md:right-16 lg:right-32 text-right z-10">
+        <div className="absolute top-16 right-4 md:top-12 md:right-16 lg:right-32 text-right z-10">
           <h2 className="font-serif text-[#213655] text-3xl md:text-4xl tracking-tight">
             SUA JORNADA COM A ZATTO
           </h2>
           <p className="font-sans text-[#213655] text-xl font-light mt-2">
-            Cuidamos de toda a jornada para você.
+            Cuidamos de cada detalhe para você.
           </p>
         </div>
 
         {/* Texto no canto inferior esquerdo */}
         <div className="absolute bottom-12 left-4 md:bottom-20 md:left-16 lg:left-32 text-left z-10 max-w-xs md:max-w-sm">
-          <p className="font-sans text-[#213655] text-base font-light md:text-2xl md:max-w-72">
+          <p className="font-sans text-[#213655] text-base font-light md:text-xl md:max-w-64">
             Durante todo o processo, você recebe atualizações com mensagens, fotos e vídeos da sua produção.
           </p>
         </div>
