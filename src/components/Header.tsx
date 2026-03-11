@@ -1,18 +1,62 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 const navLinks = [
-  { label: 'CLIENTES', href: '#clientes' },
-  { label: 'PROJETOS', href: '#projetos' },
-  { label: 'CATÁLOGO', href: '#catalogo' },
-  { label: 'JORNADA DO CLIENTE', href: '#jornada' },
-  { label: 'DEPOIMENTOS', href: '#depoimentos' },
-  { label: 'CONTATO', href: '#contato' },
+  { label: 'CLIENTES', id: 'clientes' },
+  { label: 'CATÁLOGO', id: 'catalogo' },
+  { label: 'JORNADA DO CLIENTE', id: 'jornada' },
+  { label: 'PROJETOS', id: 'projetos' },
+  { label: 'DEPOIMENTOS', id: 'depoimentos' },
+  { label: 'CONTATO', id: 'contato' },
 ];
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const visibleSections = new Set<string>();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleSections.add(entry.target.id);
+          } else {
+            visibleSections.delete(entry.target.id);
+          }
+        });
+
+        if (visibleSections.size === 0) {
+          setActiveSection('');
+        } else {
+          // Mantém a ordem dos navLinks para ativar a primeira visível
+          const first = navLinks.find(({ id }) => visibleSections.has(id));
+          if (first) setActiveSection(first.id);
+        }
+      },
+      { rootMargin: '-20% 0px -70% 0px' }
+    );
+
+    navLinks.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#fcf9f4] flex items-center justify-between px-6 py-8 md:px-12 lg:px-16 shadow-md">
+    <header className={`fixed top-0 left-0 w-full z-50 bg-[#fcf9f4] flex items-center justify-between px-6 py-6 md:px-12 lg:px-16 transition-shadow duration-300 ${scrolled ? 'shadow-md' : 'shadow-none'}`}>
       <Link href="/">
         <Image
           src="/images/logo-zatto.webp"
@@ -25,16 +69,21 @@ export default function Header() {
 
       <nav>
         <ul className="hidden md:flex flex-row items-center gap-6 lg:gap-20">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="font-sans text-[10px] lg:text-lg uppercase tracking-wide text-[#213655] hover:opacity-70 transition-opacity"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.id;
+            return (
+              <li key={link.id} className={`transition-transform duration-300 ${isActive ? 'scale-110' : 'scale-100'}`}>
+                <Link
+                  href={`#${link.id}`}
+                  className={`relative inline-block font-sans font-light text-[10px] lg:text-lg uppercase tracking-wide text-[#213655] transition-opacity duration-300 cursor-pointer
+                    after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:bg-[#213655] after:transition-all after:duration-300
+                    ${isActive ? 'opacity-100 after:w-full' : 'opacity-70 hover:opacity-100 after:w-0'}`}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function BrandPositioning() {
   return (
-    <section className="w-full grid grid-cols-1 md:grid-cols-2">
+    <section id="projetos" className="w-full grid grid-cols-1 md:grid-cols-2">
       {/* Coluna da esquerda - Conteúdo de texto */}
       <div className="bg-[#213655] text-white flex flex-col justify-center p-12 lg:p-24 lg:py-40">
         <p className="font-sans text-lg md:text-xl mb-1">não vendemos</p>

@@ -3,14 +3,14 @@ import Image from 'next/image';
 export default function Stats() {
   return (
     <section className="bg-[#fcf9f4] py-32 md:py-48 relative overflow-hidden w-full flex items-center justify-center">
-      {/* Camada de Fundo - Marca d'água */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] md:w-[120%] z-0 flex items-center justify-center pointer-events-none opacity-[0.07]">
+      {/* Camada de Fundo - SVG Colorido */}
+      <div className="absolute top-[85%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] z-0 pointer-events-none opacity-[0.03]">
         <Image
-          src="/images/logo-zatto.webp"
+          src="/images/Zatto200.svg"
           alt=""
           width={2000}
           height={1000}
-          className="max-w-none object-contain"
+          className="w-full h-auto object-contain"
         />
       </div>
 

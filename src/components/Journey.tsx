@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Journey() {
   return (
-    <section className="relative bg-[#fcf9f4] pt-0 pb-0 md:py-14">
+    <section id="jornada" className="relative bg-[#fcf9f4] pt-0 pb-0 md:py-14">
 
       {/* Container principal de conteúdo */}
       <div className="relative max-w-7xl mx-auto overflow-hidden aspect-[21/9]">

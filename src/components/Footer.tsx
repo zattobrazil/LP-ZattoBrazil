@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#fcf9f4] text-[#213655] pt-32 relative overflow-hidden">
+    <footer id="contato" className="bg-[#fcf9f4] text-[#213655] pt-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 pb-20">
         {/* Área Superior */}
         <div className="flex flex-col lg:flex-row justify-between gap-16 mb-12">
@@ -67,7 +67,7 @@ export default function Footer() {
                   >
                     Contato
                   </Link>
-                </li> <span className='text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer'><a href="https://muxstudio.com.br" target="_blank" rel="noopener noreferrer">MUX Studio</a></span>
+                </li> 
               </ul>
             </div>
 
@@ -79,7 +79,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-0 font-sans">
                 <li>
                   <a
-                    href="https://instagram.com/zattobrazil"
+                    href="https://instagram.com/zatto.brazil"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
@@ -99,7 +99,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://linkedin.com/company/zattobrazil"
+                    href="https://linkedin.com/company/zatto-brazil"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
@@ -116,7 +116,7 @@ export default function Footer() {
 
       {/* Logo Enorme no Fundo - de ponta a ponta */}
       <div className="w-full h-32 md:h-48 lg:h-96 overflow-hidden">
-        <div className="relative w-full h-full">
+        <div className="relative w-[102%] left-[-1.4%] h-full">
           <Image
             src="/images/Zatto200.svg"
             alt="Zatto Brazil"

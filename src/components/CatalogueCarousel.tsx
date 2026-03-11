@@ -21,7 +21,7 @@ export default function CatalogueCarousel() {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="relative">
+    <section id="catalogo" className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {slides.map((src, index) => (

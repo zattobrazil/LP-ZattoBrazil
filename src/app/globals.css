@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Para monitores tipo laptop (entre 1024px e 1535px de largura) */
+  @media (min-width: 1024px) and (max-width: 1535px) {
+    html {
+      font-size: 80%; /* Reduz tudo que usa REM no site em 20% */
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
