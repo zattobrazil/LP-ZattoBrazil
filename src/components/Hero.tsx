@@ -11,7 +11,7 @@ export default function Hero() {
     <section className="relative w-full min-h-[95vh] mt-24 overflow-hidden">
       <motion.div className="absolute inset-[0%] z-0" style={{ y }}>
         <Image
-          src="/images/hero-section.webp"
+          src="/images/hero-section.png"
           alt="Zatto Brindes"
           fill
           priority

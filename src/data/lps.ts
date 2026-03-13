@@ -2,6 +2,7 @@ export interface LandingPageData {
   slug: string;
   heroTitle: string;
   heroSubtitle: string;
+  catalogLink?: string;
   clientsLogos: string[];
   positioningText: string;
   kitsList: string[];
