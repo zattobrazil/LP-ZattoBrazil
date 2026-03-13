@@ -33,7 +33,10 @@ export default function CatalogueCarousel() {
                 src={src}
                 alt={`Catálogo Zatto Brazil ${(index % images.length) + 1}`}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className={`object-cover transition-transform duration-500 group-hover:scale-105 ${
+                  src.includes('catalogo-2') ? 'object-top' :
+                  src.includes('catalogo-4') ? 'object-bottom' : ''
+                }`}
               />
             </div>
           ))}
