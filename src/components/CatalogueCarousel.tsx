@@ -4,17 +4,42 @@ import { useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 
-const images = [
-  '/images/catalogo-1.webp',
-  '/images/catalogo-2.webp',
-  '/images/catalogo-3.webp',
-  '/images/catalogo-4.webp',
+type CarouselItem = {
+  name: string;
+  imageUrl: string;
+  altText: string;
+};
+
+interface CatalogueCarouselProps {
+  items?: CarouselItem[];
+}
+
+const defaultItems: CarouselItem[] = [
+  {
+    name: 'Catalogo 1',
+    imageUrl: '/images/catalogo-1.webp',
+    altText: 'Catalogo Zatto 1',
+  },
+  {
+    name: 'Catalogo 2',
+    imageUrl: '/images/catalogo-2.webp',
+    altText: 'Catalogo Zatto 2',
+  },
+  {
+    name: 'Catalogo 3',
+    imageUrl: '/images/catalogo-3.webp',
+    altText: 'Catalogo Zatto 3',
+  },
+  {
+    name: 'Catalogo 4',
+    imageUrl: '/images/catalogo-4.webp',
+    altText: 'Catalogo Zatto 4',
+  },
 ];
 
-// Replica o array para o Embla ter conteúdo além do viewport e o loop funcionar
-const slides = [...images, ...images, ...images];
-
-export default function CatalogueCarousel() {
+export default function CatalogueCarousel({ items }: CatalogueCarouselProps) {
+  const baseItems = items && items.length > 0 ? items : defaultItems;
+  const slides = [...baseItems, ...baseItems, ...baseItems];
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 30, align: 'start' });
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
@@ -24,19 +49,16 @@ export default function CatalogueCarousel() {
     <section id="catalogo" className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          {slides.map((src, index) => (
+          {slides.map((item, index) => (
             <div
-              key={`${src}-${index}`}
+              key={`${item.imageUrl}-${index}`}
               className="flex-[0_0_100%] md:flex-[0_0_25%] min-w-0 relative aspect-[3/4] overflow-hidden group"
             >
               <Image
-                src={src}
-                alt={`Catálogo Zatto Brazil ${(index % images.length) + 1}`}
+                src={encodeURI(item.imageUrl)}
+                alt={item.altText || item.name}
                 fill
-                className={`object-cover transition-transform duration-500 group-hover:scale-105 ${
-                  src.includes('catalogo-2') ? 'object-top' :
-                  src.includes('catalogo-4') ? 'object-bottom' : ''
-                }`}
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
           ))}

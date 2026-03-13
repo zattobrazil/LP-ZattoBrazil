@@ -3,16 +3,22 @@
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-export default function Hero() {
+interface HeroProps {
+  imageUrl?: string;
+}
+
+export default function Hero({
+  imageUrl = '/images/hero-section.png',
+}: HeroProps) {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], ['0%', '40%']);
 
   return (
-    <section className="relative w-full min-h-[95vh] mt-24 overflow-hidden">
+    <section id="inicio" className="relative w-full min-h-[95vh] mt-24 overflow-hidden">
       <motion.div className="absolute inset-[0%] z-0" style={{ y }}>
         <Image
-          src="/images/hero-section.png"
-          alt="Zatto Brindes"
+          src={imageUrl}
+          alt="Imagem de destaque da Zatto Brazil"
           fill
           priority
           className="object-cover object-center"

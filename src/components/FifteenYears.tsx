@@ -1,12 +1,18 @@
 import Image from 'next/image';
 
-export default function FifteenYears() {
+interface FifteenYearsProps {
+  catalogLink?: string;
+}
+
+export default function FifteenYears({
+  catalogLink = '/catalogos/catalogo-padrao-zatto-2026.pdf',
+}: FifteenYearsProps) {
   return (
     // 1. Adicionado 'overflow-hidden' na section para a linha infinita não quebrar a tela
     <section className="relative w-full py-24 md:py-32 overflow-hidden">
       {/* Fundo */}
       <Image
-        src="/images/bg-15anos.webp"
+        src="/images/bg-15anos.jpg"
         alt="15 anos produzindo brindes"
         fill
         className="object-cover z-0"
@@ -22,9 +28,14 @@ export default function FifteenYears() {
           <h2 className="font-serif text-white text-4xl md:text-5xl lg:text-5xl leading-tight">
             15 ANOS<br />PRODUZINDO<br />BRINDES E<br />IMPULSIONADORES
           </h2>
-          <button className="bg-white text-[#213655] font-bold text-xl uppercase px-8 py-3 cursor-pointer select-none">
-            CONHECER CATÁLOGO
-          </button>
+          <a
+            href={catalogLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-[#213655] font-bold text-xl uppercase px-8 py-3 cursor-pointer select-none"
+          >
+            CONHECER CATALOGO
+          </a>
         </div>
 
         {/* Coluna da Direita - Lista */}
