@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import { DEFAULT_CATALOG_LINK } from '@/data/lps';
 
 interface FifteenYearsProps {
   catalogLink?: string;
 }
 
 export default function FifteenYears({
-  catalogLink = '/catalogos/catalogo-padrao-zatto-2026.pdf',
+  catalogLink = DEFAULT_CATALOG_LINK,
 }: FifteenYearsProps) {
   return (
     // 1. Adicionado 'overflow-hidden' na section para a linha infinita não quebrar a tela

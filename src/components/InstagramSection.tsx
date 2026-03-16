@@ -21,8 +21,8 @@ const instagramPosts = [
   },
   {
     id: 4,
-    image: '/images/bolsa-ecobag-octapharma-personalizada.webp',
-    alt: 'Ecobag personalizada Octapharma para acao promocional',
+    image: '/images/ecobag-sustentavel-personalizada-cliente-octapharma.webp',
+    alt: 'Ecobag sustentavel personalizada produzida para o cliente Octapharma',
     link: 'https://instagram.com/zatto.brazil',
   },
 ];

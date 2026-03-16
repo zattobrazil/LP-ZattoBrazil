@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { notFound } from 'next/navigation';
-import { getAllSlugs, getLandingPageBySlug } from '@/data/lps';
+import { getAllSlugs, getCatalogLinkBySlug, getLandingPageBySlug } from '@/data/lps';
 
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -104,6 +104,7 @@ export default async function LandingPageDinamica({ params }: SlugPageProps) {
 
   const folderCarouselItems = await getCarouselItemsFromSlug(lpData.slug, lpData.bannerTitle);
   const carouselItems = folderCarouselItems.length > 0 ? folderCarouselItems : lpData.carrossel;
+  const catalogLink = getCatalogLinkBySlug(lpData.slug, lpData.catalogLink);
 
   return (
     <main className="min-h-screen bg-[#fcf9f4] text-[#213655]">
@@ -111,11 +112,11 @@ export default async function LandingPageDinamica({ params }: SlugPageProps) {
       <Hero />
       <BannerCTA title={lpData.bannerTitle} subtitle={lpData.bannerSubtitle} slug={lpData.slug} />
       <Clients logos={lpData.clientsLogos} />
-      <CatalogueCarousel items={carouselItems} />
+      <CatalogueCarousel items={carouselItems} catalogLink={catalogLink} />
       <Journey />
       <BrandPositioning />
       <Stats />
-      <FifteenYears catalogLink={lpData.catalogLink} />
+      <FifteenYears catalogLink={catalogLink} />
       <Testimonials />
       <InstagramSection />
       <Footer />

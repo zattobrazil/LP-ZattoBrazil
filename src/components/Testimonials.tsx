@@ -6,36 +6,77 @@ import Image from 'next/image';
 
 const testimonials = [
   {
-    id: 1,
+    id: 0,
     greeting: 'Oi Ju,',
-    text: 'Muito obrigada por toda delicadeza e atenção com a nossa marca. Parceiros como a Zatto são raros, mas muito importantes para nós.',
-    name: 'Manu Belmudes',
-    location: 'RS, Brasil',
-    logo: '/images/cliente-ollie.webp',
+    text: 'Muito obrigada por toda delicadeza e atenção com a nossa marca. Parceiros como a Zatto são raros, mas muito importantes para nóss. Muito obrigada!',
+    location: 'Rio de Janeiro - Rio de Janeiro',
+    brand: 'Octapharma',
+    logo: '/images/cliente-octapharma.webp',
+  },
+  {
+    id: 1,
+    greeting: 'Chegouuu!',
+    text: 'Ao vivo é mais bonito ainda. Valeeeeeu!',
+    location: 'São Paulo - São Paulo',
+    brand: 'Lab1095',
+    logo: '/images/cliente-lab1095.png',
   },
   {
     id: 2,
-    greeting: 'Oi Ju,',
-    text: 'Muito obrigada por toda delicadeza e atenção com a nossa marca. Parceiros como a Zatto são raros, mas muito importantes para nós.',
-    name: 'Manu Belmudes',
-    location: 'RS, Brasil',
-    logo: '/images/cliente-ollie.webp',
+    greeting: 'To APAIXONADA pelas bolsas,',
+    text: 'Nossa, ficou perfeito! Muitíssimo obrigada por ter feito com todo capricho e por ter pego de última hora.',
+    location: 'Piracicaba - São Paulo',
+    brand: 'FZ Semi Joias',
+    logo: '/images/cliente-fz-semi-joias.png',
   },
   {
     id: 3,
-    greeting: 'Oi Ju,',
-    text: 'Muito obrigada por toda delicadeza e atenção com a nossa marca. Parceiros como a Zatto são raros, mas muito importantes para nós.',
-    name: 'Manu Belmudes',
-    location: 'RS, Brasil',
-    logo: '/images/cliente-ollie.webp',
+    greeting: 'Nossa,',
+    text: 'Ficou muito lindo, ainda melhor do que eu imaginei. Um arraso: delicado, elegante. Um brinde que eu usaria fácil se recebesse, muito condizente com o público que estara presente no jantar.',
+    location: 'Salvador - Bahia',
+    brand: 'Hangcha',
+    logo: '/images/cliente-hangcha.png',
   },
   {
     id: 4,
-    greeting: 'Oi Ju,',
-    text: 'Muito obrigada por toda delicadeza e atenção com a nossa marca. Parceiros como a Zatto são raros, mas muito importantes para nós.',
-    name: 'Manu Belmudes',
-    location: 'RS, Brasil',
+    greeting: 'Foi um sucessooooo!',
+    text: 'Eu postei e um monte de amiga quer, rs. Socorro! A qualidade, sem palavras!',
+    location: 'Limeira - São Paulo',
+    brand: 'Pedra Bruta',
+    logo: '/images/cliente-pedra-bruta.png',
+  },
+  {
+    id: 5,
+    greeting: 'Elogiaram bastante os brindes,',
+    text: 'incluindo o lenço! Ontem teve ate briga pela agenda. Ficaram bobos com o suporte da caneta.',
+    location: 'Rio de Janeiro - RJ',
+    brand: 'Octapharma',
+    logo: '/images/cliente-octapharma.webp',
+  },
+  {
+    id: 6,
+    greeting: 'Bom dia, Julia!',
+    text: 'Passando pra agradecer toda a atenção e dizer que o pessoal adorou os presentes. Muito obrigado!',
+    location: 'Piracicaba - São Paulo',
+    brand: 'Hyundai',
+    logo: '/images/cliente-hyundai.webp',
+  },
+  {
+    id: 7,
+    greeting: 'Oii Ju, tudo bem?',
+    text: 'Com mais calma, apos o evento, quero muuuuuuuuito agradecer por todo carinho e cuidado que teve durante todo o processo. Fiquei muito feliz com tudo que entregou. Obrigado mesmo por tudo!',
+    location: 'Campinas - São Paulo',
+    brand: 'CPFL',
+    logo: '/images/cliente-cpfl.webp',
+  },
+  {
+    id: 8,
+    greeting: 'Seu nome foi citado aqui na reuniao de MKT,',
+    text: 'Voce trouxe um arsenal de coisas diferentes que dá pra personalizar, chaveiro, copo etc. que daria pra usar como brindes. Eles amaram a iniciativa e que temos que retomar mais brindes diferentes, com referências internacionais. Pois o direcional e ter brindes fora da caixa, diferentes, que não tem no mercado, pra inovar mesmo.',
+    location: 'São Paulo - São Paulo',
+    brand: 'Ollie',
     logo: '/images/cliente-ollie.webp',
+    isWide: true,
   },
 ];
 
@@ -122,7 +163,7 @@ export default function Testimonials() {
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
-                  className="flex-[0_0_85%] md:flex-[0_0_45%] min-w-0 mr-6"
+                  className={`flex-[0_0_85%] ${testimonial.isWide ? 'md:flex-[0_0_96%]' : 'md:flex-[0_0_45%]'} min-w-0 mr-6`}
                 >
                   {/* Card de Depoimento */}
                   <div className="bg-[#fcf9f4] rounded-2xl p-8 text-[#213655] h-full flex flex-col select-none">
@@ -149,25 +190,33 @@ export default function Testimonials() {
                     </div>
 
                     {/* Texto do Depoimento */}
-                    <p className="font-sans text-sm md:text-lg mt-4 mb-6 flex-grow leading-none">
+                    <p className="font-sans text-sm md:text-lg mt-4 mb-6 flex-grow leading-relaxed">
                       {testimonial.text}
                     </p>
 
                     {/* Linha Divisória */}
                     <hr className="border-[#213655]/20 mb-4" />
 
-                    {/* Rodapé: Nome/Local e Logo */}
+                    {/* Rodapé: Empresa, Local e Logo */}
                     <div className="flex justify-between items-center">
                       <div>
-                        <p className="font-bold text-base">{testimonial.name}</p>
+                        <p className="font-bold text-base">{testimonial.brand}</p>
                         <p className="text-sm text-[#213655]/70">{testimonial.location}</p>
                       </div>
-                      <div className="flex items-center justify-center h-[20px] w-[50px]">
+                      <div
+                        className={`flex items-center justify-center ${
+                          testimonial.brand === 'Octapharma'
+                            ? 'h-[26px] w-[72px]'
+                            : testimonial.logo.includes('cliente-fz')
+                              ? 'h-[16px] w-[20px] pt-2'
+                              : 'h-[20px] w-[50px]'
+                        }`}
+                      >
                         <Image
                           src={testimonial.logo}
-                          alt="Logo do cliente"
-                          height={20}
-                          width={50}
+                          alt={`Logo ${testimonial.brand}`}
+                          height={testimonial.brand === 'Octapharma' ? 26 : testimonial.logo.includes('cliente-fz') ? 16 : 20}
+                          width={testimonial.brand === 'Octapharma' ? 72 : testimonial.logo.includes('cliente-fz') ? 40 : 50}
                           className="object-contain"
                         />
                       </div>

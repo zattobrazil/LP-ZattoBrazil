@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
+import { DEFAULT_CATALOG_LINK } from '@/data/lps';
 
 type CarouselItem = {
   name: string;
@@ -12,47 +13,53 @@ type CarouselItem = {
 
 interface CatalogueCarouselProps {
   items?: CarouselItem[];
+  catalogLink?: string;
 }
 
 const defaultItems: CarouselItem[] = [
   {
     name: 'Brinde bolsa necessaire Ollie amarela',
-    imageUrl: '/images/brinde-bolsa-necessaire-ollie-amarela.webp',
-    altText: 'Brinde com bolsa e necessaire amarela personalizada para a Ollie',
+    imageUrl: '/images/necessaire-fluffy-personalizada-para-brinde-corporativo.webp',
+    altText: 'Necessaire fluffy personalizada para brinde corporativo',
   },
   {
     name: 'Brinde bone DAIG PET azul',
-    imageUrl: '/images/brinde-boné-daig-pet-azul.webp',
-    altText: 'Bone azul personalizado DAIG PET para campanhas e eventos',
+    imageUrl: '/images/bone-personalizado-para-brindes-em-feiras-e-eventos.webp',
+    altText: 'Bone personalizado utilizado como brinde corporativo em feiras e eventos',
   },
   {
     name: 'Brinde copo parede dupla Bermudes Advogados',
-    imageUrl: '/images/brinde-copo-parede-dupla-café-bermudes-advogados-vidro.webp',
-    altText: 'Copo de vidro com parede dupla personalizado para Bermudes Advogados',
+    imageUrl: '/images/copo-de-vidro-para-cafe-personalizado-com-logo.webp',
+    altText: 'Copo de vidro para cafe personalizado com logo da empresa',
   },
   {
     name: 'Brinde porta caneta couro Octapharma',
-    imageUrl: '/images/brinde-porta-caneta-couro-octapharma.webp',
-    altText: 'Porta caneta de couro personalizado Octapharma para escritorio',
+    imageUrl: '/images/kit-caneta-de-metal-personalizada-com-porta-caneta.webp',
+    altText: 'Kit com caneta de metal personalizada e porta-caneta corporativo',
   },
   {
-    name: 'Brinde bolsa Octapharma',
-    imageUrl: '/images/brinde-bolsa-octapharma.webp',
-    altText: 'Bolsa personalizada Octapharma para acao de brindes corporativos',
+    name: 'Kit funcionarios personalizado',
+    imageUrl: '/images/kit-boas-vindas-corporativo-com-copo-termico-e-acessorios.jpg',
+    altText: 'Kit de boas-vindas corporativo personalizado com copo termico, camiseta, moleskine e acessorios',
   },
   {
-    name: 'Brinde caneta personalizada Aegea preta',
-    imageUrl: '/images/brinde-caneta-personalizada-aegea-preta.webp',
-    altText: 'Caneta preta personalizada da Aegea para kit corporativo',
+    name: 'Kit estagiarios onboarding',
+    imageUrl: '/images/kit-onboarding-premium-com-necessaire-copo-e-caneta.jpg',
+    altText: 'Kit onboarding premium para colaboradores contendo necessaire, copo de vidro e caneta personalizados',
   },
   {
-    name: 'Brinde garrafa personalizada Octapharma',
-    imageUrl: '/images/brinde-garrafa-personalizada-octapharma.webp',
-    altText: 'Garrafa personalizada Octapharma como brinde corporativo premium',
+    name: 'Necessaire personalizada em couro sintetico',
+    imageUrl: '/images/necessaire-em-couro-sintetico-com-alca-personalizada.JPG',
+    altText: 'Necessaire em couro sintetico com alca personalizada para empresas',
+  },
+  {
+    name: 'Agenda caderno moleskine',
+    imageUrl: '/images/agenda-moleskine-com-calendario-agricola-personalizada.JPG',
+    altText: 'Agenda estilo moleskine com calendario agricola personalizado',
   },
 ];
 
-export default function CatalogueCarousel({ items }: CatalogueCarouselProps) {
+export default function CatalogueCarousel({ items, catalogLink = DEFAULT_CATALOG_LINK }: CatalogueCarouselProps) {
   const baseItems = items && items.length > 0 ? items : defaultItems;
   const slides = [...baseItems, ...baseItems, ...baseItems];
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 30, align: 'start' });
@@ -98,9 +105,7 @@ export default function CatalogueCarousel({ items }: CatalogueCarouselProps) {
   }, [emblaApi, baseItems.length, visibleSlots]);
 
   const getObjectPosition = (item: CarouselItem) => {
-    if (item.imageUrl.includes('brinde-caneta-personalizada-aegea-preta')) return 'center bottom';
-    if (item.imageUrl.includes('brinde-bolsa-octapharma')) return 'center top';
-    if (item.imageUrl.includes('brinde-boné-daig-pet-azul')) return 'center 58%';
+    if (item.imageUrl.includes('bone-personalizado-para-brindes-em-feiras-e-eventos')) return 'center 58%';
     return 'center';
   };
 
@@ -135,13 +140,21 @@ export default function CatalogueCarousel({ items }: CatalogueCarouselProps) {
               key={`${item.imageUrl}-${index}`}
               className="flex-[0_0_100%] md:flex-[0_0_25%] min-w-0 relative aspect-[3/4] overflow-hidden group"
             >
-              <Image
-                src={encodeURI(item.imageUrl)}
-                alt={item.altText || item.name}
-                fill
-                style={{ objectPosition: getObjectPosition(item) }}
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+              <a
+                href={catalogLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full h-full"
+                aria-label={`Abrir catalogo: ${item.name}`}
+              >
+                <Image
+                  src={encodeURI(item.imageUrl)}
+                  alt={item.altText || item.name}
+                  fill
+                  style={{ objectPosition: getObjectPosition(item) }}
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </a>
             </div>
           ))}
         </div>

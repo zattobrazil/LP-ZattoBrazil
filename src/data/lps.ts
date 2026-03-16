@@ -4,7 +4,7 @@ export interface LandingPageData {
   metaDescription: string;
   bannerTitle: string;
   bannerSubtitle: string;
-  catalogLink: string;
+  catalogLink?: string;
   clientsLogos: Array<{
     url: string;
     altText: string;
@@ -16,6 +16,19 @@ export interface LandingPageData {
     imageUrl: string;
     altText: string;
   }>;
+}
+
+export const DEFAULT_CATALOG_LINK =
+  'https://www.canva.com/design/DAGoFjSVOHI/jgTpxA83MGENdPfO5Ge5SQ/view?utm_content=DAGoFjSVOHI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3b1876d186';
+
+// Preencha este mapa quando tiver catalogos personalizados por LP.
+export const CATALOG_LINKS_BY_SLUG: Record<string, string> = {
+  // Exemplo:
+  // 'dia-das-maes-lembrancinha-empresas': 'https://...'
+};
+
+export function getCatalogLinkBySlug(slug: string, fallback?: string): string {
+  return CATALOG_LINKS_BY_SLUG[slug] ?? fallback ?? DEFAULT_CATALOG_LINK;
 }
 
 const clientsDiaDasMaes: LandingPageData['clientsLogos'] = [
@@ -58,7 +71,6 @@ export const landingPages: LandingPageData[] = [
     bannerTitle: 'LEMBRANCINHAS PERSONALIZADAS PARA O DIA DAS MÃES',
     bannerSubtitle:
       'Ideias de lembrancinhas de Dia das Mães para sua empresa, personalizadas para presentear colaboradoras e clientes.',
-    catalogLink: '/catalogos/dia-das-maes-lembracinha-empresas.pdf',
     clientsLogos: clientsDiaDasMaes,
     positioningText:
       'Criamos lembrancinhas corporativas com personalizacao estrategica para fortalecer sua marca no Dia das Maes.',
@@ -95,7 +107,6 @@ export const landingPages: LandingPageData[] = [
     bannerTitle: 'Brindes Corporativos para o Dia das Mães',
     bannerSubtitle:
       'Ideias de brindes personalizados para homenagear colaboradoras, clientes e parceiras da sua empresa no Dia das Mães.',
-    catalogLink: '/catalogos/dia-das-maes-brindes-corporativos.pdf',
     clientsLogos: clientsDiaDasMaes,
     positioningText:
       'Desenvolvemos brindes corporativos de alto valor percebido para campanhas de Dia das Mães com foco em relacionamento.',
