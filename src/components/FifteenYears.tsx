@@ -12,7 +12,7 @@ export default function FifteenYears({
     <section className="relative w-full py-24 md:py-32 overflow-hidden">
       {/* Fundo */}
       <Image
-        src="/images/bg-15anos.jpg"
+        src="/images/kit-bolsa-e-necessaire-octapharma.jpg"
         alt="15 anos produzindo brindes"
         fill
         className="object-cover z-0"
@@ -32,7 +32,7 @@ export default function FifteenYears({
             href={catalogLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-[#213655] font-bold text-xl uppercase px-8 py-3 cursor-pointer select-none"
+            className="button-hover rounded-sm bg-white text-[#213655] font-bold text-xl uppercase px-8 py-3 cursor-pointer select-none"
           >
             CONHECER CATALOGO
           </a>

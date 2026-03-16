@@ -14,7 +14,7 @@ export default function Footer() {
             </h3>
             <Link
               href="#catalogo"
-              className="inline-block bg-[#213655] text-[#fcf9f4] font-sans font-bold text-md uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity"
+              className="button-hover hover:shadow-2xl rounded-sm inline-block bg-[#213655] text-[#fcf9f4] font-sans font-bold text-md uppercase tracking-widest px-8 py-4"
             >
               Conheça Nosso Catálogo
             </Link>
@@ -47,7 +47,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#jornada"
-                    className="text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
+                    className="text-xs uppercase tracking-wider hover:opacity-100 hover:translate-x-2 transition-opacity cursor-pointer opacity-90"
                   >
                     Jornada do Cliente
                   </Link>

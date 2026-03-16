@@ -38,7 +38,7 @@ export default function BannerCTA({
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-white text-[#213655] font-bold text-sm uppercase px-8 py-3 cursor-pointer select-none"
+        className="button-hover rounded-sm bg-white text-[#213655] font-bold text-xl uppercase px-8 py-3 cursor-pointer select-none"
       >
         FAÇA UM ORÇAMENTO
       </a>

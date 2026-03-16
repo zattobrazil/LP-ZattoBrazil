@@ -149,7 +149,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Texto do Depoimento */}
-                    <p className="font-sans text-sm md:text-lg mt-4 mb-6 flex-grow leading-loose">
+                    <p className="font-sans text-sm md:text-lg mt-4 mb-6 flex-grow leading-none">
                       {testimonial.text}
                     </p>
 

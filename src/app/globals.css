@@ -14,3 +14,18 @@
 html {
   scroll-behavior: smooth;
 }
+
+@layer components {
+  .button-hover {
+    @apply transition-all duration-200 ease-out;
+  }
+
+  .button-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+  }
+
+  .button-hover:active {
+    transform: translateY(-1px);
+  }
+}

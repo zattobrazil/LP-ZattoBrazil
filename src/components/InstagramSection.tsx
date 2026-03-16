@@ -1,10 +1,30 @@
 import Image from 'next/image';
 
 const instagramPosts = [
-  { id: 1, image: '/images/insta-1.webp', link: 'https://instagram.com/zatto.brazil' },
-  { id: 2, image: '/images/insta-2.webp', link: 'https://instagram.com/zatto.brazil' },
-  { id: 3, image: '/images/insta-3.webp', link: 'https://instagram.com/zatto.brazil' },
-  { id: 4, image: '/images/insta-4.webp', link: 'https://instagram.com/zatto.brazil' },
+  {
+    id: 1,
+    image: '/images/garrafa-plastico-tampa-madeira-octapharma.webp',
+    alt: 'Garrafa personalizada Octapharma com tampa de madeira',
+    link: 'https://instagram.com/zatto.brazil',
+  },
+  {
+    id: 2,
+    image: '/images/kit-bolsa-e-necessaire-octapharma.jpg',
+    alt: 'Kit com bolsa e necessaire personalizado Octapharma',
+    link: 'https://instagram.com/zatto.brazil',
+  },
+  {
+    id: 3,
+    image: '/images/kit-bolsa-e-necessaires-hyundai.webp',
+    alt: 'Kit com bolsa e necessaires personalizados Hyundai',
+    link: 'https://instagram.com/zatto.brazil',
+  },
+  {
+    id: 4,
+    image: '/images/bolsa-ecobag-octapharma-personalizada.webp',
+    alt: 'Ecobag personalizada Octapharma para acao promocional',
+    link: 'https://instagram.com/zatto.brazil',
+  },
 ];
 
 export default function InstagramSection() {
@@ -30,7 +50,7 @@ export default function InstagramSection() {
             >
               <Image
                 src={post.image}
-                alt="Instagram Zatto"
+                alt={post.alt}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />

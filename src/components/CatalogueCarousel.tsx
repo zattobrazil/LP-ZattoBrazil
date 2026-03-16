@@ -16,24 +16,39 @@ interface CatalogueCarouselProps {
 
 const defaultItems: CarouselItem[] = [
   {
-    name: 'Catalogo 1',
-    imageUrl: '/images/catalogo-1.webp',
-    altText: 'Catalogo Zatto 1',
+    name: 'Brinde bolsa necessaire Ollie amarela',
+    imageUrl: '/images/brinde-bolsa-necessaire-ollie-amarela.webp',
+    altText: 'Brinde com bolsa e necessaire amarela personalizada para a Ollie',
   },
   {
-    name: 'Catalogo 2',
-    imageUrl: '/images/catalogo-2.webp',
-    altText: 'Catalogo Zatto 2',
+    name: 'Brinde bone DAIG PET azul',
+    imageUrl: '/images/brinde-boné-daig-pet-azul.webp',
+    altText: 'Bone azul personalizado DAIG PET para campanhas e eventos',
   },
   {
-    name: 'Catalogo 3',
-    imageUrl: '/images/catalogo-3.webp',
-    altText: 'Catalogo Zatto 3',
+    name: 'Brinde copo parede dupla Bermudes Advogados',
+    imageUrl: '/images/brinde-copo-parede-dupla-café-bermudes-advogados-vidro.webp',
+    altText: 'Copo de vidro com parede dupla personalizado para Bermudes Advogados',
   },
   {
-    name: 'Catalogo 4',
-    imageUrl: '/images/catalogo-4.webp',
-    altText: 'Catalogo Zatto 4',
+    name: 'Brinde porta caneta couro Octapharma',
+    imageUrl: '/images/brinde-porta-caneta-couro-octapharma.webp',
+    altText: 'Porta caneta de couro personalizado Octapharma para escritorio',
+  },
+  {
+    name: 'Brinde bolsa Octapharma',
+    imageUrl: '/images/brinde-bolsa-octapharma.webp',
+    altText: 'Bolsa personalizada Octapharma para acao de brindes corporativos',
+  },
+  {
+    name: 'Brinde caneta personalizada Aegea preta',
+    imageUrl: '/images/brinde-caneta-personalizada-aegea-preta.webp',
+    altText: 'Caneta preta personalizada da Aegea para kit corporativo',
+  },
+  {
+    name: 'Brinde garrafa personalizada Octapharma',
+    imageUrl: '/images/brinde-garrafa-personalizada-octapharma.webp',
+    altText: 'Garrafa personalizada Octapharma como brinde corporativo premium',
   },
 ];
 
@@ -41,6 +56,12 @@ export default function CatalogueCarousel({ items }: CatalogueCarouselProps) {
   const baseItems = items && items.length > 0 ? items : defaultItems;
   const slides = [...baseItems, ...baseItems, ...baseItems];
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 30, align: 'start' });
+  const getObjectPosition = (item: CarouselItem) => {
+    if (item.imageUrl.includes('brinde-caneta-personalizada-aegea-preta')) return 'center bottom';
+    if (item.imageUrl.includes('brinde-bolsa-octapharma')) return 'center top';
+    if (item.imageUrl.includes('brinde-boné-daig-pet-azul')) return 'center 58%';
+    return 'center';
+  };
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -58,6 +79,7 @@ export default function CatalogueCarousel({ items }: CatalogueCarouselProps) {
                 src={encodeURI(item.imageUrl)}
                 alt={item.altText || item.name}
                 fill
+                style={{ objectPosition: getObjectPosition(item) }}
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
