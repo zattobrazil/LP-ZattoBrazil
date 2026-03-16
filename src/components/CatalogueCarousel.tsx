@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 
@@ -56,12 +56,72 @@ export default function CatalogueCarousel({ items }: CatalogueCarouselProps) {
   const baseItems = items && items.length > 0 ? items : defaultItems;
   const slides = [...baseItems, ...baseItems, ...baseItems];
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 30, align: 'start' });
+  const [inViewSlides, setInViewSlides] = useState<number[]>([]);
+  const [visibleSlots, setVisibleSlots] = useState(4);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+    const updateVisibleSlots = () => setVisibleSlots(mediaQuery.matches ? 4 : 1);
+
+    updateVisibleSlots();
+    mediaQuery.addEventListener('change', updateVisibleSlots);
+
+    return () => {
+      mediaQuery.removeEventListener('change', updateVisibleSlots);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const updateInViewSlides = () => {
+      emblaApi.slidesInView();
+
+      const startIndex = emblaApi.selectedScrollSnap() % baseItems.length;
+      const expectedVisible = Array.from(
+        { length: visibleSlots },
+        (_, offset) => (startIndex + offset) % baseItems.length
+      );
+      setInViewSlides(expectedVisible);
+    };
+
+    updateInViewSlides();
+    emblaApi.on('slidesInView', updateInViewSlides);
+    emblaApi.on('reInit', updateInViewSlides);
+    emblaApi.on('select', updateInViewSlides);
+
+    return () => {
+      emblaApi.off('slidesInView', updateInViewSlides);
+      emblaApi.off('reInit', updateInViewSlides);
+      emblaApi.off('select', updateInViewSlides);
+    };
+  }, [emblaApi, baseItems.length, visibleSlots]);
+
   const getObjectPosition = (item: CarouselItem) => {
     if (item.imageUrl.includes('brinde-caneta-personalizada-aegea-preta')) return 'center bottom';
     if (item.imageUrl.includes('brinde-bolsa-octapharma')) return 'center top';
     if (item.imageUrl.includes('brinde-boné-daig-pet-azul')) return 'center 58%';
     return 'center';
   };
+
+  const activeBars = useMemo(() => {
+    if (baseItems.length === 0 || inViewSlides.length === 0) return [] as Array<{ left: number; width: number }>;
+
+    const start = inViewSlides[0];
+    const size = Math.min(visibleSlots, baseItems.length);
+
+    if (start + size <= baseItems.length) {
+      return [{ left: (start / baseItems.length) * 100, width: (size / baseItems.length) * 100 }];
+    }
+
+    const firstPart = baseItems.length - start;
+    const secondPart = size - firstPart;
+
+    return [
+      { left: (start / baseItems.length) * 100, width: (firstPart / baseItems.length) * 100 },
+      { left: 0, width: (secondPart / baseItems.length) * 100 },
+    ];
+  }, [baseItems.length, inViewSlides, visibleSlots]);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -83,6 +143,19 @@ export default function CatalogueCarousel({ items }: CatalogueCarouselProps) {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 w-[68%] max-w-xs h-5 pointer-events-none">
+        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-2 bg-gray-500/40 rounded-full shadow-[0_6px_18px_rgba(0,0,0,0.35)]" />
+        <div className="relative z-10 h-full">
+          {activeBars.map((bar, index) => (
+            <div
+              key={`progress-active-${index}`}
+              className="absolute top-0 h-full bg-white rounded-full"
+              style={{ left: `${bar.left}%`, width: `${bar.width}%` }}
+            />
           ))}
         </div>
       </div>
