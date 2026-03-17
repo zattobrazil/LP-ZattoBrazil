@@ -94,7 +94,7 @@ export default function RootLayout({
     <html lang="pt-BR" className={helveticaNow.variable}>
       <head>
         {/* Favicon */}
-        <link rel="icon" href="/images/ztt-icon.ico" type="image/x-icon" />
+        <link rel="icon" href="/images/z-icon.ico" type="image/x-icon" />
         
         {/* Preload de fontes críticas */}
         <link
