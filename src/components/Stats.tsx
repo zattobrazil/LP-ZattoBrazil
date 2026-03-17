@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Stats() {
   return (
-    <section className="bg-[#fcf9f4] py-32 md:py-48 relative overflow-hidden w-full flex items-center justify-center">
+    <section className="bg-[#fcf9f4] py-14 md:py-48 relative overflow-hidden w-full flex items-center justify-center">
       {/* Camada de Fundo - SVG Colorido */}
       <div className="absolute top-[85%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] z-0 pointer-events-none opacity-[0.03]">
         <Image

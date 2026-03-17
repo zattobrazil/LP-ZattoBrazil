@@ -21,6 +21,14 @@ interface ClientsProps {
 
 export default function Clients({ logos }: ClientsProps) {
   const isDynamic = Boolean(logos && logos.length);
+  const mobileOrderByName: Record<string, string> = {
+    Octapharma: 'order-1',
+    CPFL: 'order-2',
+    Bermudes: 'order-3',
+    Ollie: 'order-4',
+    'Hyundai AutoEver Brasil': 'order-5',
+    Aegea: 'order-6',
+  };
   const blueBrandFilter =
     'brightness(0) saturate(100%) invert(19%) sepia(19%) saturate(1186%) hue-rotate(171deg) brightness(92%) contrast(92%)';
 
@@ -76,7 +84,7 @@ export default function Clients({ logos }: ClientsProps) {
         NOSSOS CLIENTES
       </h2>
 
-      <div className="flex flex-row flex-wrap justify-center gap-12 px-6">
+      <div className="grid grid-cols-2 gap-y-10 gap-x-6 px-6 md:flex md:flex-row md:flex-wrap md:justify-center md:gap-12">
         {isDynamic
           ? logos!.map((client) => (
               <Image
@@ -85,7 +93,7 @@ export default function Clients({ logos }: ClientsProps) {
                 alt={client.altText}
                 width={getLogoSize(client.url, client.size).width}
                 height={getLogoSize(client.url, client.size).height}
-                className="object-contain"
+                className="object-contain justify-self-center"
                 style={shouldUseBlueFilter(client.url) ? { filter: blueBrandFilter } : undefined}
               />
             ))
@@ -96,7 +104,7 @@ export default function Clients({ logos }: ClientsProps) {
                 alt={`Logo do cliente ${client.name}`}
                 width={getLogoSize(client.src, client.size).width}
                 height={getLogoSize(client.src, client.size).height}
-                className="object-contain"
+                className={`object-contain justify-self-center ${mobileOrderByName[client.name] ?? ''} md:order-none`}
                 style={shouldUseBlueFilter(client.src) ? { filter: blueBrandFilter } : undefined}
               />
             ))}

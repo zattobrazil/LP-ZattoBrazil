@@ -35,18 +35,18 @@ export default function Footer({
   };
 
   return (
-    <footer id="contato" className="bg-[#fcf9f4] text-[#213655] pt-32 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 pb-20">
+    <footer id="contato" className="bg-[#fcf9f4] text-[#213655] pt-14 md:pt-32 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 pb-0 md:pb-20">
         {/* Área Superior */}
         <div className="flex flex-col lg:flex-row justify-between gap-16 mb-12">
           {/* Lado Esquerdo: Título e Botão */}
           <div className="lg:w-1/3">
-            <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl lg:w-64 mb-6 leading-tight">
-              CONECTANDO MARCAS <br />E PESSOAS
+            <h3 className="font-serif text-3xl md:text-3xl lg:text-4xl lg:w-64 mb-6 leading-tight">
+              CONECTANDO<br />MARCAS<br />E PESSOAS
             </h3>
             <Link
               href="#catalogo"
-              className="button-hover hover:shadow-2xl rounded-sm inline-block bg-[#213655] text-[#fcf9f4] font-sans font-bold text-md uppercase tracking-widest px-8 py-4"
+              className="button-hover hover:shadow-2xl rounded-sm block w-full lg:w-fit mx-auto lg:mx-0 bg-[#213655] text-[#fcf9f4] font-sans font-bold text-md uppercase tracking-widest px-8 py-4 text-center"
             >
               Conheça Nosso Catálogo
             </Link>
@@ -148,14 +148,14 @@ export default function Footer({
       </div>
 
       {/* Logo Enorme no Fundo - de ponta a ponta */}
-      <div className="w-full h-32 md:h-48 lg:h-96 overflow-hidden">
+      <div className="w-full h-24 md:h-48 lg:h-96 overflow-hidden">
         <div className="relative w-[102%] left-[-1.4%] h-full">
           <Image
             src="/images/Zatto200.svg"
             alt="Zatto Brazil"
             fill
-            className="object-cover object-top opacity-100"
-            style={{ objectPosition: 'center 7%', filter: 'brightness(0) saturate(100%) invert(18%) sepia(23%) saturate(1282%) hue-rotate(171deg) brightness(95%) contrast(93%)' }}
+            className="object-cover object-top md:object-[center_7%] opacity-100"
+            style={{ filter: 'brightness(0) saturate(100%) invert(18%) sepia(23%) saturate(1282%) hue-rotate(171deg) brightness(95%) contrast(93%)' }}
           />
         </div>
       </div>

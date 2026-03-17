@@ -25,7 +25,7 @@ export default function FifteenYears({
       {/* Container de Conteúdo */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-24">
         {/* Coluna da Esquerda - Título */}
-        <div className="flex flex-col items-start gap-24">
+        <div className="flex flex-col items-start gap-10 md:gap-24">
           <h2 className="font-serif text-white text-4xl md:text-5xl lg:text-5xl leading-tight">
             15 ANOS<br />PRODUZINDO<br />BRINDES E<br />IMPULSIONADORES
           </h2>
