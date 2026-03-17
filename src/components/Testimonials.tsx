@@ -64,15 +64,15 @@ const testimonials = [
   {
     id: 7,
     greeting: 'Oii Ju, tudo bem?',
-    text: 'Com mais calma, apos o evento, quero muuuuuuuuito agradecer por todo carinho e cuidado que teve durante todo o processo. Fiquei muito feliz com tudo que entregou. Obrigado mesmo por tudo!',
+    text: 'Com mais calma, após o evento, quero muuuuuuuuito agradecer por todo carinho e cuidado que teve durante todo o processo. Fiquei muito feliz com tudo que entregou. Obrigado mesmo por tudo!',
     location: 'Campinas - São Paulo',
     brand: 'CPFL',
     logo: '/images/cliente-cpfl.webp',
   },
   {
     id: 8,
-    greeting: 'Seu nome foi citado aqui na reuniao de MKT,',
-    text: 'Voce trouxe um arsenal de coisas diferentes que dá pra personalizar, chaveiro, copo etc. que daria pra usar como brindes. Eles amaram a iniciativa e que temos que retomar mais brindes diferentes, com referências internacionais. Pois o direcional e ter brindes fora da caixa, diferentes, que não tem no mercado, pra inovar mesmo.',
+    greeting: 'Seu nome foi citado aqui na reunião de MKT,',
+    text: 'Você trouxe um arsenal de coisas diferentes que dá pra personalizar, chaveiro, copo etc. que daria pra usar como brindes. Eles amaram a iniciativa e que temos que retomar mais brindes diferentes, com referências internacionais. Pois o direcional e ter brindes fora da caixa, diferentes, que não tem no mercado, pra inovar mesmo.',
     location: 'São Paulo - São Paulo',
     brand: 'Ollie',
     logo: '/images/cliente-ollie.webp',
