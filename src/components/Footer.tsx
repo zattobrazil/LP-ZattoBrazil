@@ -56,14 +56,14 @@ export default function Footer({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-24">
             {/* Coluna 1: Navegação */}
             <div>
-              <h4 className="font-sans text-xs uppercase tracking-widest mb-4 font-bold">
+              <h4 className="font-sans text-lg uppercase tracking-widest mb-4 font-bold">
                 Zatto Brazil
               </h4>
               <ul className="flex flex-col gap-0 font-sans">
                 <li>
                   <Link
                     href="#projetos"
-                    className="text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
+                    className="text-sm uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     Projetos
                   </Link>
@@ -71,7 +71,7 @@ export default function Footer({
                 <li>
                   <Link
                     href="#catalogo"
-                    className="text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
+                    className="text-sm uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     Catálogo
                   </Link>
@@ -79,7 +79,7 @@ export default function Footer({
                 <li>
                   <Link
                     href="#jornada"
-                    className="text-xs uppercase tracking-wider hover:opacity-100 hover:translate-x-2 transition-opacity cursor-pointer opacity-90"
+                    className="text-sm uppercase tracking-wider hover:opacity-100 hover:translate-x-2 transition-opacity cursor-pointer opacity-90"
                   >
                     Jornada do Cliente
                   </Link>
@@ -87,7 +87,7 @@ export default function Footer({
                 <li>
                   <Link
                     href="#depoimentos"
-                    className="text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
+                    className="text-sm uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     Depoimentos
                   </Link>
@@ -95,7 +95,7 @@ export default function Footer({
                 <li>
                   <Link
                     href="#contato"
-                    className="text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
+                    className="text-sm uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     Contato
                   </Link>
@@ -105,7 +105,7 @@ export default function Footer({
 
             {/* Coluna 2: Fale Conosco */}
             <div>
-              <h4 className="font-sans text-xs uppercase tracking-widest mb-4 font-bold">
+              <h4 className="font-sans text-lg uppercase tracking-widest mb-4 font-bold">
                 Fale Conosco
               </h4>
               <ul className="flex flex-col gap-0 font-sans">
@@ -114,7 +114,7 @@ export default function Footer({
                     href="https://instagram.com/zatto.brazil"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
+                    className="text-sm uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     Instagram
                   </a>
@@ -125,7 +125,7 @@ export default function Footer({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={handleWhatsAppClick}
-                    className="text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
+                    className="text-sm uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     WhatsApp
                   </a>
@@ -135,7 +135,7 @@ export default function Footer({
                     href="https://linkedin.com/company/zatto-brazil"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
+                    className="text-sm uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     LinkedIn
                   </a>
