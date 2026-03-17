@@ -1,22 +1,22 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
-import './globals.css';
+import '../src/app/globals.css';
 
 const helveticaNow = localFont({
   src: [
     {
-      path: '../../public/fonts/HelveticaNow-Light.woff2',
+      path: '../public/fonts/HelveticaNow-Light.woff2',
       weight: '300',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/HelveticaNow-Regular.woff2',
+      path: '../public/fonts/HelveticaNow-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/HelveticaNow-Bold.woff2',
+      path: '../public/fonts/HelveticaNow-Bold.woff2',
       weight: '700',
       style: 'normal',
     },
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     description: 'Especialistas em brindes personalizados de alta qualidade.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/hero-section.png',
         width: 1200,
         height: 630,
         alt: 'Zatto Brazil - Brindes Personalizados',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Zatto Brazil | Brindes Personalizados',
     description: 'Especialistas em brindes personalizados de alta qualidade.',
-    images: ['/og-image.jpg'],
+    images: ['/images/hero-section.png'],
   },
   verification: {
     google: 'seu-codigo-de-verificacao-aqui',
@@ -92,6 +92,53 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={helveticaNow.variable}>
+      <head>
+        {/* Favicon */}
+        <link rel="icon" href="/images/ztt-icon.ico" type="image/x-icon" />
+        
+        {/* Preload de fontes críticas */}
+        <link
+          rel="preload"
+          href="/fonts/HelveticaNow-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/HelveticaNow-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        {/* Schema markup - Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Zatto Brazil',
+              url: 'https://zattobrazil.com.br',
+              logo: 'https://zattobrazil.com.br/images/logo.svg',
+              description: 'Especialistas em brindes personalizados de alta qualidade para todos os segmentos.',
+              sameAs: [
+                'https://instagram.com/zatto.brazil',
+                'https://linkedin.com/company/zatto-brazil',
+              ],
+              contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'Customer Service',
+                url: 'https://wa.me/5519971142666',
+              },
+              address: {
+                '@type': 'PostalAddress',
+                addressCountry: 'BR',
+              },
+            }),
+          }}
+        />
+      </head>
       <body className={`${helveticaNow.className} bg-[#fcf9f4] text-[#213655] antialiased cursor-default`}>
         <Script
           id="gtm-script"

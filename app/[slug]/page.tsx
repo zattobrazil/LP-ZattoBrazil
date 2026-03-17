@@ -16,6 +16,7 @@ import FifteenYears from '@/components/FifteenYears';
 import Testimonials from '@/components/Testimonials';
 import InstagramSection from '@/components/InstagramSection';
 import Footer from '@/components/Footer';
+import Script from 'next/script';
 
 interface SlugPageProps {
   params: {
@@ -108,6 +109,40 @@ export default async function LandingPageDinamica({ params }: SlugPageProps) {
 
   return (
     <main className="min-h-screen bg-[#fcf9f4] text-[#213655]">
+      <h1 className="sr-only">{lpData.metaTitle}</h1>
+      <Script
+        id={`schema-lp-${lpData.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name: lpData.bannerTitle,
+            description: lpData.metaDescription,
+            url: `https://zattobrazil.com.br/${lpData.slug}`,
+            brand: {
+              '@type': 'Brand',
+              name: 'Zatto Brazil',
+            },
+            manufacturer: {
+              '@type': 'Organization',
+              name: 'Zatto Brazil',
+              url: 'https://zattobrazil.com.br',
+              contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'Customer Service',
+                url: 'https://wa.me/5519971142666',
+              },
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5',
+              ratingCount: '700000',
+              reviewCount: '150',
+            },
+          }),
+        }}
+      />
       <Header />
       <Hero />
       <BannerCTA
