@@ -16,7 +16,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#fcf9f4] text-white">
       <Header />
       <Hero />
-      <BannerCTA />
+      <BannerCTA slug="home" whatsappMessage="Olá! Vim pelo site." />
       <Clients />
       <CatalogueCarousel />
       <Journey />
@@ -25,7 +25,7 @@ export default function Home() {
       <FifteenYears />
       <Testimonials />
       <InstagramSection />
-      <Footer />
+      <Footer slug="home" whatsappMessage="Olá! Vim pelo site." />
     </main>
   );
 }

@@ -110,7 +110,12 @@ export default async function LandingPageDinamica({ params }: SlugPageProps) {
     <main className="min-h-screen bg-[#fcf9f4] text-[#213655]">
       <Header />
       <Hero />
-      <BannerCTA title={lpData.bannerTitle} subtitle={lpData.bannerSubtitle} slug={lpData.slug} />
+      <BannerCTA
+        title={lpData.bannerTitle}
+        subtitle={lpData.bannerSubtitle}
+        slug={lpData.slug}
+        whatsappMessage={lpData.whatsappMessage}
+      />
       <Clients logos={lpData.clientsLogos} />
       <CatalogueCarousel items={carouselItems} catalogLink={catalogLink} />
       <Journey />
@@ -119,7 +124,7 @@ export default async function LandingPageDinamica({ params }: SlugPageProps) {
       <FifteenYears catalogLink={catalogLink} />
       <Testimonials />
       <InstagramSection />
-      <Footer />
+      <Footer slug={lpData.slug} whatsappMessage={lpData.whatsappMessage} />
     </main>
   );
 }

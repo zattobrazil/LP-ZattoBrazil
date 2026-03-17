@@ -161,7 +161,7 @@ export default function CatalogueCarousel({ items, catalogLink = DEFAULT_CATALOG
       </div>
 
       <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 w-[68%] max-w-xs h-5 pointer-events-none">
-        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-2 bg-gray-500/40 rounded-full shadow-[0_6px_18px_rgba(0,0,0,0.35)]" />
+        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-2 bg-[#213655]/40 rounded-full shadow-[0_6px_18px_rgba(0,0,0,0.35)]" />
         <div className="relative z-10 h-full">
           {activeBars.map((bar, index) => (
             <div

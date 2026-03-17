@@ -4,6 +4,7 @@ export interface LandingPageData {
   metaDescription: string;
   bannerTitle: string;
   bannerSubtitle: string;
+  whatsappMessage: string;
   catalogLink?: string;
   clientsLogos: Array<{
     url: string;
@@ -71,6 +72,7 @@ export const landingPages: LandingPageData[] = [
     bannerTitle: 'LEMBRANCINHAS PERSONALIZADAS PARA O DIA DAS MÃES',
     bannerSubtitle:
       'Ideias de lembrancinhas de Dia das Mães para sua empresa, personalizadas para presentear colaboradoras e clientes.',
+    whatsappMessage: 'Olá! Vim pelo site e gostaria de um orçamento de lembrancinhas corporativas de Dia das Mães.',
     clientsLogos: clientsDiaDasMaes,
     positioningText:
       'Criamos lembrancinhas corporativas com personalizacao estrategica para fortalecer sua marca no Dia das Maes.',
@@ -107,6 +109,7 @@ export const landingPages: LandingPageData[] = [
     bannerTitle: 'Brindes Corporativos para o Dia das Mães',
     bannerSubtitle:
       'Ideias de brindes personalizados para homenagear colaboradoras, clientes e parceiras da sua empresa no Dia das Mães.',
+    whatsappMessage: 'Olá! Vim pelo site e gostaria de um orçamento de brindes corporativos para o Dia das Mães.',
     clientsLogos: clientsDiaDasMaes,
     positioningText:
       'Desenvolvemos brindes corporativos de alto valor percebido para campanhas de Dia das Mães com foco em relacionamento.',

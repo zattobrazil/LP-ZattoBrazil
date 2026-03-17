@@ -1,7 +1,39 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { buildWhatsAppLink } from '@/utils/whatsapp';
 
-export default function Footer() {
+interface FooterProps {
+  slug: string;
+  whatsappMessage?: string;
+  whatsappNumber?: string;
+}
+
+export default function Footer({
+  slug,
+  whatsappMessage = 'Olá! Vim pelo site.',
+  whatsappNumber = '5519971142666',
+}: FooterProps) {
+  const whatsappUrl = buildWhatsAppLink(whatsappNumber, whatsappMessage);
+
+  const handleWhatsAppClick = () => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const trackedWindow = window as Window & {
+      dataLayer?: Array<Record<string, unknown>>;
+    };
+
+    trackedWindow.dataLayer = trackedWindow.dataLayer || [];
+    trackedWindow.dataLayer.push({
+      event: 'whatsapp_click',
+      slug,
+      button_location: 'footer',
+    });
+  };
+
   return (
     <footer id="contato" className="bg-[#fcf9f4] text-[#213655] pt-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 pb-20">
@@ -89,9 +121,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://wa.me/5511999999999"
+                    href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleWhatsAppClick}
                     className="text-xs uppercase tracking-wider hover:opacity-70 transition-opacity cursor-pointer"
                   >
                     WhatsApp
