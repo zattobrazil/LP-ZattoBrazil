@@ -16,7 +16,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#fcf9f4] text-white">
       <Header />
       <Hero />
-      <BannerCTA slug="home" whatsappMessage="Olá! Vim pelo site." />
+      <BannerCTA slug="home" whatsappMessage="Olá! Vim pelo site da Zatto Brazil!" />
       <Clients />
       <CatalogueCarousel />
       <Journey />
@@ -25,7 +25,7 @@ export default function Home() {
       <FifteenYears />
       <Testimonials />
       <InstagramSection />
-      <Footer slug="home" whatsappMessage="Olá! Vim pelo site." />
+      <Footer slug="home" whatsappMessage="Olá! Vim pelo site da Zatto Brazil!" />
     </main>
   );
 }
