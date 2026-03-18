@@ -28,6 +28,10 @@ export const dynamicParams = false;
 
 const DEFAULT_HERO_IMAGE = '/images/hero-section.png';
 
+function getLpHeroImageBySlug(slug: string): string {
+  return `/images/${slug}/hero-section-${slug}.png`;
+}
+
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }
@@ -47,6 +51,7 @@ export function generateMetadata({ params }: SlugPageProps): Metadata {
   }
 
   const canonicalUrl = `https://zattobrazil.com.br/${lpData.slug}`;
+  const heroImage = getLpHeroImageBySlug(lpData.slug);
 
   return {
     title: lpData.metaTitle,
@@ -63,7 +68,7 @@ export function generateMetadata({ params }: SlugPageProps): Metadata {
       locale: 'pt_BR',
       images: [
         {
-          url: DEFAULT_HERO_IMAGE,
+          url: heroImage,
           alt: lpData.metaTitle,
         },
       ],
@@ -72,7 +77,7 @@ export function generateMetadata({ params }: SlugPageProps): Metadata {
       card: 'summary_large_image',
       title: lpData.metaTitle,
       description: lpData.metaDescription,
-      images: [DEFAULT_HERO_IMAGE],
+      images: [heroImage],
     },
   };
 }
@@ -83,7 +88,7 @@ async function getCarouselItemsFromSlug(slug: string, title: string) {
   try {
     const files = await readdir(folderPath);
     const imageFiles = files
-      .filter((file) => /\.(jpg|jpeg|png|webp|avif)$/i.test(file))
+      .filter((file) => /\.(jpg|jpeg|png|webp|avif)$/i.test(file) && !/^hero-section-/i.test(file))
       .sort((a, b) => a.localeCompare(b, 'pt-BR', { numeric: true, sensitivity: 'base' }));
 
     return imageFiles.map((file, index) => ({
@@ -106,6 +111,7 @@ export default async function LandingPageDinamica({ params }: SlugPageProps) {
   const folderCarouselItems = await getCarouselItemsFromSlug(lpData.slug, lpData.bannerTitle);
   const carouselItems = folderCarouselItems.length > 0 ? folderCarouselItems : lpData.carrossel;
   const catalogLink = getCatalogLinkBySlug(lpData.slug, lpData.catalogLink);
+  const heroImage = getLpHeroImageBySlug(lpData.slug);
 
   return (
     <main className="min-h-screen bg-[#fcf9f4] text-[#213655]">
@@ -144,7 +150,7 @@ export default async function LandingPageDinamica({ params }: SlugPageProps) {
         }}
       />
       <Header />
-      <Hero />
+      <Hero imageUrl={heroImage} />
       <BannerCTA
         title={lpData.bannerTitle}
         subtitle={lpData.bannerSubtitle}
