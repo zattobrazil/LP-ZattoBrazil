@@ -13,6 +13,9 @@ const navLinks = [
   { label: 'CONTATO', id: 'contato' },
 ];
 
+const blueBrandFilter =
+  'brightness(0) saturate(100%) invert(19%) sepia(19%) saturate(1186%) hue-rotate(171deg) brightness(92%) contrast(92%)';
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -59,11 +62,12 @@ export default function Header() {
     <header className={`fixed top-0 left-0 w-full z-50 bg-[#fcf9f4] flex items-center justify-between px-6 py-6 lg:px-12 xl:px-16 2xl:px-24 transition-shadow duration-300 ${scrolled ? 'shadow-md' : 'shadow-none'}`}>
       <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="cursor-pointer select-none">
         <Image
-          src="/images/logo-zatto.webp"
+          src="/images/logo-zatto.png"
           alt="Zatto Brazil"
           width={192}
           height={64}
           className="w-28 md:w-32 lg:w-36 xl:w-40 2xl:w-48 h-auto"
+          style={{ filter: blueBrandFilter }}
           priority
         />
       </button>
