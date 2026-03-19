@@ -11,7 +11,7 @@ interface BannerCTAProps {
 }
 
 export default function BannerCTA({
-  title = 'CRIAMOS PRODUTOS QUE IMPULSIONAM MARCAS E VENDAS.',
+  title = 'CRIAMOS PRODUTOS QUE IMPULSIONAM MARCAS E VENDAS',
   subtitle = 'Do conceito à entrega, transformamos brindes corporativos em experiências de marca.',
   slug,
   whatsappMessage,
@@ -43,7 +43,7 @@ export default function BannerCTA({
         {normalizedTitle}
       </h2>
 
-      <p className="text-xl text-white mb-8">
+      <p className="text-sm md:text-xl text-white mb-12">
         {subtitle}
       </p>
 

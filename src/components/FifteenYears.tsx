@@ -16,26 +16,26 @@ export default function FifteenYears({
         src="/images/kit-bolsa-e-necessaire-octapharma.jpg"
         alt="15 anos produzindo brindes"
         fill
-        className="object-cover z-0"
+        className="object-cover z-0 brightness-75"
       />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/20 z-10"></div>
 
       {/* Container de Conteúdo */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-24">
+      <div className="relative z-20 w-full max-w-7xl px-6 md:px-12 flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
         {/* Coluna da Esquerda - Título */}
         <div className="flex flex-col items-start gap-10 md:gap-24">
-          <h2 className="font-serif text-white text-4xl md:text-5xl lg:text-5xl leading-tight">
+          <h2 className="font-serif text-white text-3xl md:text-5xl lg:text-5xl leading-tight">
             15 ANOS<br />PRODUZINDO<br />BRINDES E<br />IMPULSIONADORES
           </h2>
           <a
             href={catalogLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="button-hover rounded-sm bg-white text-[#213655] font-bold text-xl uppercase px-8 py-3 cursor-pointer select-none"
+            className="button-hover rounded-sm bg-white text-[#213655] font-bold text-xl uppercase px-8 py-3 cursor-pointer select-none w-full items-center justify-center flex md:w-[286px] md:items-start md:justify-start"
           >
-            CONHECER CATALOGO
+            CONHECER CATÁLOGO
           </a>
         </div>
 
@@ -45,7 +45,7 @@ export default function FifteenYears({
             Isso cria uma linha falsa de 100vw (100% da tela) que atira para a direita 
           */}
           <li className="relative py-5 text-white font-sans text-base lg:text-lg leading-relaxed after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[100vw] after:h-[1px] after:bg-white/40">
-            Kit onboarding, Kit para palestrantes,<br />Kit para C-Level, Kit para presentear
+            Kit onboarding, Kit para palestrantes, Kit Boas-Vindas,<br />Kit para C-Level, Kit para presentear
           </li>
           <li className="relative py-5 text-white font-sans text-base lg:text-lg leading-relaxed after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[100vw] after:h-[1px] after:bg-white/40">
             Produtos para congressos, feiras e eventos
@@ -58,7 +58,7 @@ export default function FifteenYears({
           </li>
           {/* O último li mantido sem linha, conforme teu código original */}
           <li className="relative py-5 text-white font-sans text-base lg:text-lg leading-relaxed after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[100vw] after:h-[1px] after:bg-white/40">
-            Impulsionadores de Marca<br />(programa de pontuação)
+            Impulsionadores de Marca (produtos corporativos):<br />necessaire, bolsas, carteiras, cadernos, agendas, blocos, bonés, chapéus, mouse-pads, squeezes, garrafas, canetas, etc.
           </li>
         </ul>
       </div>

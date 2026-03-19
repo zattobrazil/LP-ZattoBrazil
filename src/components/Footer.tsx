@@ -34,6 +34,23 @@ export default function Footer({
     });
   };
 
+  const handleFooterCtaClick = () => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const trackedWindow = window as Window & {
+      dataLayer?: Array<Record<string, unknown>>;
+    };
+
+    trackedWindow.dataLayer = trackedWindow.dataLayer || [];
+    trackedWindow.dataLayer.push({
+      event: 'whatsapp_click',
+      slug,
+      button_location: 'cta_footer',
+    });
+  };
+
   return (
     <footer id="contato" className="bg-[#fcf9f4] text-[#213655] pt-14 md:pt-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 pb-0 md:pb-20">
@@ -44,12 +61,15 @@ export default function Footer({
             <h3 className="font-serif text-3xl md:text-3xl lg:text-4xl lg:w-64 mb-6 leading-tight">
               CONECTANDO<br />MARCAS<br />E PESSOAS
             </h3>
-            <Link
-              href="#catalogo"
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleFooterCtaClick}
               className="button-hover hover:shadow-2xl rounded-sm block w-full lg:w-fit mx-auto lg:mx-0 bg-[#213655] text-[#fcf9f4] font-sans font-bold text-md uppercase tracking-widest px-8 py-4 text-center"
             >
-              Conheça Nosso Catálogo
-            </Link>
+              FAÇA UM ORÇAMENTO
+            </a>
           </div>
 
           {/* Lado Direito: Colunas de Links */}
