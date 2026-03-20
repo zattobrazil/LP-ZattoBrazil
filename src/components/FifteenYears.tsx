@@ -23,7 +23,7 @@ export default function FifteenYears({
       <div className="absolute inset-0 bg-black/20 z-10"></div>
 
       {/* Container de Conteúdo */}
-      <div className="relative z-20 w-full max-w-7xl px-6 md:px-12 flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
+      <div className="relative z-20 w-full max-w-7xl px-6 md:px-12 flex flex-col lg:flex-row justify-between gap-12 lg:gap-24 md:mx-auto">
         {/* Coluna da Esquerda - Título */}
         <div className="flex flex-col items-start gap-10 md:gap-24">
           <h2 className="font-serif text-white text-3xl md:text-5xl lg:text-5xl leading-tight">
