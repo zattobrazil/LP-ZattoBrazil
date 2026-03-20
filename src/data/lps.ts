@@ -34,30 +34,30 @@ export function getCatalogLinkBySlug(slug: string, fallback?: string): string {
 
 const clientsDiaDasMaes: LandingPageData['clientsLogos'] = [
   {
-    url: '/images/cliente-hyundai.webp',
+    url: '/images/clientes/cliente-hyundai.webp',
     altText: 'Logo do cliente Hyundai AutoEver Brasil',
     size: 'large',
   },
   {
-    url: '/images/cliente-denso.png',
+    url: '/images/clientes/cliente-denso.png',
     altText: 'Logo do cliente Denso',
     size: 'medium',
   },
   {
-    url: '/images/cliente-octapharma.webp',
+    url: '/images/clientes/cliente-octapharma.webp',
     altText: 'Logo do cliente Octapharma',
   },
   {
-    url: '/images/cliente-cpfl.webp',
+    url: '/images/clientes/cliente-cpfl.webp',
     altText: 'Logo do cliente CPFL',
     size: 'small',
   },
   {
-    url: '/images/cliente-ecoprimos.png',
+    url: '/images/clientes/cliente-ecoprimos.png',
     altText: 'Logo do cliente Ecoprimos Brindes',
   },
   {
-    url: '/images/cliente-ollie.webp',
+    url: '/images/clientes/cliente-ollie.webp',
     altText: 'Logo do cliente Ollie',
     size: 'small',
   },

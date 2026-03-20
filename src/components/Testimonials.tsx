@@ -11,7 +11,7 @@ const testimonials = [
     text: 'Muito obrigada por toda delicadeza e atenção com a nossa marca. Parceiros como a Zatto são raros, mas muito importantes para nóss. Muito obrigada!',
     location: 'Rio de Janeiro - Rio de Janeiro',
     brand: 'Octapharma',
-    logo: '/images/cliente-octapharma.webp',
+    logo: '/images/clientes/cliente-octapharma.webp',
   },
   {
     id: 1,
@@ -19,7 +19,7 @@ const testimonials = [
     text: 'Ao vivo é mais bonito ainda. Valeeeeeu!',
     location: 'São Paulo - São Paulo',
     brand: 'Lab1095',
-    logo: '/images/cliente-lab1095.png',
+    logo: '/images/clientes/cliente-lab1095.png',
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const testimonials = [
     text: 'Nossa, ficou perfeito! Muitíssimo obrigada por ter feito com todo capricho e por ter pego de última hora.',
     location: 'Piracicaba - São Paulo',
     brand: 'FZ Semi Joias',
-    logo: '/images/cliente-fz-semi-joias.png',
+    logo: '/images/clientes/cliente-fz-semi-joias.png',
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const testimonials = [
     text: 'Ficou muito lindo, ainda melhor do que eu imaginei. Um arraso: delicado, elegante. Um brinde que eu usaria fácil se recebesse, muito condizente com o público que estara presente no jantar.',
     location: 'Salvador - Bahia',
     brand: 'Hangcha',
-    logo: '/images/cliente-hangcha.png',
+    logo: '/images/clientes/cliente-hangcha.png',
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const testimonials = [
     text: 'Eu postei e um monte de amiga quer, rs. Socorro! A qualidade, sem palavras!',
     location: 'Limeira - São Paulo',
     brand: 'Pedra Bruta',
-    logo: '/images/cliente-pedra-bruta.png',
+    logo: '/images/clientes/cliente-pedra-bruta.png',
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const testimonials = [
     text: 'incluindo o lenço! Ontem teve ate briga pela agenda. Ficaram bobos com o suporte da caneta.',
     location: 'Rio de Janeiro - RJ',
     brand: 'Octapharma',
-    logo: '/images/cliente-octapharma.webp',
+    logo: '/images/clientes/cliente-octapharma.webp',
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const testimonials = [
     text: 'Passando pra agradecer toda a atenção e dizer que o pessoal adorou os presentes. Muito obrigado!',
     location: 'Piracicaba - São Paulo',
     brand: 'Hyundai',
-    logo: '/images/cliente-hyundai.webp',
+    logo: '/images/clientes/cliente-hyundai.webp',
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ const testimonials = [
     text: 'Com mais calma, após o evento, quero muuuuuuuuito agradecer por todo carinho e cuidado que teve durante todo o processo. Fiquei muito feliz com tudo que entregou. Obrigado mesmo por tudo!',
     location: 'Campinas - São Paulo',
     brand: 'CPFL',
-    logo: '/images/cliente-cpfl.webp',
+    logo: '/images/clientes/cliente-cpfl.webp',
   },
   {
     id: 8,
@@ -75,7 +75,7 @@ const testimonials = [
     text: 'Você trouxe um arsenal de coisas diferentes que dá pra personalizar, chaveiro, copo etc. que daria pra usar como brindes. Eles amaram a iniciativa e que temos que retomar mais brindes diferentes, com referências internacionais. Pois o direcional e ter brindes fora da caixa, diferentes, que não tem no mercado, pra inovar mesmo.',
     location: 'São Paulo - São Paulo',
     brand: 'Ollie',
-    logo: '/images/cliente-ollie.webp',
+    logo: '/images/clientes/cliente-ollie.webp',
     isWide: true,
   },
 ];

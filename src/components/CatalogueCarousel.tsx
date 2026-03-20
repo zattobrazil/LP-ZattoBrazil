@@ -19,42 +19,42 @@ interface CatalogueCarouselProps {
 const defaultItems: CarouselItem[] = [
   {
     name: 'Brinde bolsa necessaire Ollie amarela',
-    imageUrl: '/images/necessaire-fluffy-personalizada-para-brinde-corporativo.webp',
+    imageUrl: '/images/home/necessaire-fluffy-personalizada-para-brinde-corporativo.webp',
     altText: 'Necessaire fluffy personalizada para brinde corporativo',
   },
   {
     name: 'Brinde bone DAIG PET azul',
-    imageUrl: '/images/bone-personalizado-para-brindes-em-feiras-e-eventos.webp',
+    imageUrl: '/images/home/bone-personalizado-para-brindes-em-feiras-e-eventos.webp',
     altText: 'Bone personalizado utilizado como brinde corporativo em feiras e eventos',
   },
   {
     name: 'Brinde copo parede dupla Bermudes Advogados',
-    imageUrl: '/images/copo-de-vidro-para-cafe-personalizado-com-logo.webp',
+    imageUrl: '/images/home/copo-de-vidro-para-cafe-personalizado-com-logo.webp',
     altText: 'Copo de vidro para cafe personalizado com logo da empresa',
   },
   {
     name: 'Brinde porta caneta couro Octapharma',
-    imageUrl: '/images/kit-caneta-de-metal-personalizada-com-porta-caneta.webp',
+    imageUrl: '/images/home/kit-caneta-de-metal-personalizada-com-porta-caneta.webp',
     altText: 'Kit com caneta de metal personalizada e porta-caneta corporativo',
   },
   {
     name: 'Kit funcionarios personalizado',
-    imageUrl: '/images/kit-boas-vindas-corporativo-com-copo-termico-e-acessorios.jpg',
+    imageUrl: '/images/home/kit-boas-vindas-corporativo-com-copo-termico-e-acessorios.jpg',
     altText: 'Kit de boas-vindas corporativo personalizado com copo termico, camiseta, moleskine e acessorios',
   },
   {
     name: 'Kit estagiarios onboarding',
-    imageUrl: '/images/kit-onboarding-premium-com-necessaire-copo-e-caneta.jpg',
+    imageUrl: '/images/home/kit-onboarding-premium-com-necessaire-copo-e-caneta.jpg',
     altText: 'Kit onboarding premium para colaboradores contendo necessaire, copo de vidro e caneta personalizados',
   },
   {
     name: 'Necessaire personalizada em couro sintetico',
-    imageUrl: '/images/necessaire-em-couro-sintetico-com-alca-personalizada.JPG',
+    imageUrl: '/images/home/necessaire-em-couro-sintetico-com-alca-personalizada.JPG',
     altText: 'Necessaire em couro sintetico com alca personalizada para empresas',
   },
   {
     name: 'Agenda caderno moleskine',
-    imageUrl: '/images/agenda-moleskine-com-calendario-agricola-personalizada.JPG',
+    imageUrl: '/images/home/agenda-moleskine-com-calendario-agricola-personalizada.JPG',
     altText: 'Agenda estilo moleskine com calendario agricola personalizado',
   },
 ];

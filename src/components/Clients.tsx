@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
 const clients = [
-  { name: 'Hyundai AutoEver Brasil', src: '/images/cliente-hyundai.webp', size: 'large' as const },
-  { name: 'Bermudes', src: '/images/cliente-bermudes.webp' },
-  { name: 'Octapharma', src: '/images/cliente-octapharma.webp' },
-  { name: 'CPFL', src: '/images/cliente-cpfl.webp', size: 'small' as const },
-  { name: 'Aegea', src: '/images/cliente-aegea.webp', size: 'aegea' as const },
-  { name: 'Ollie', src: '/images/cliente-ollie.webp', size: 'small' as const },
+  { name: 'Hyundai AutoEver Brasil', src: '/images/clientes/cliente-hyundai.webp', size: 'large' as const },
+  { name: 'Bermudes', src: '/images/clientes/cliente-bermudes.webp' },
+  { name: 'Octapharma', src: '/images/clientes/cliente-octapharma.webp' },
+  { name: 'CPFL', src: '/images/clientes/cliente-cpfl.webp', size: 'small' as const },
+  { name: 'Aegea', src: '/images/clientes/cliente-aegea.webp', size: 'aegea' as const },
+  { name: 'Ollie', src: '/images/clientes/cliente-ollie.webp', size: 'small' as const },
 ];
 
 type DynamicClientLogo = {

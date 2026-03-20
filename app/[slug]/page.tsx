@@ -108,8 +108,10 @@ export default async function LandingPageDinamica({ params }: SlugPageProps) {
     notFound();
   }
 
-  const folderCarouselItems = await getCarouselItemsFromSlug(lpData.slug, lpData.bannerTitle);
-  const carouselItems = folderCarouselItems.length > 0 ? folderCarouselItems : lpData.carrossel;
+  const folderCarouselItems = lpData.carrossel.length === 0
+    ? await getCarouselItemsFromSlug(lpData.slug, lpData.bannerTitle)
+    : [];
+  const carouselItems = lpData.carrossel.length > 0 ? lpData.carrossel : folderCarouselItems;
   const catalogLink = getCatalogLinkBySlug(lpData.slug, lpData.catalogLink);
   const heroImage = getLpHeroImageBySlug(lpData.slug);
 
