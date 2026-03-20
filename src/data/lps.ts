@@ -79,25 +79,64 @@ export const landingPages: LandingPageData[] = [
     carrossel: [
       {
         name: 'Item 1',
-        imageUrl:
-          '/images/dia-das-maes-lembrancinha-empresas/Espelho-Personalizado-com-Nome-em-Couro-Sintetico-Lembrancinha-Dia-das-Maes.jpeg',
+        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Kit-para-as-maes-presentes.JPG',
         altText: 'Lembrancinha de Dia das Maes para empresas - item 1',
       },
       {
         name: 'Item 2',
         imageUrl:
-          '/images/dia-das-maes-lembrancinha-empresas/Necessaire-personalizada-com-logo-e-frase-Dia-das-Maes.jpg',
+          '/images/dia-das-maes-lembrancinha-empresas/Brinde-personalizado-com-logo-Dia-das-Maes.JPG',
         altText: 'Lembrancinha de Dia das Maes para empresas - item 2',
       },
       {
         name: 'Item 3',
-        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Gloss-Brinde-Dia-das-Maes.jpg',
+        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Garrafa-Termica-Com-Nome-E-Logo-Mulheres.jpg',
         altText: 'Lembrancinha de Dia das Maes para empresas - item 3',
       },
       {
         name: 'Item 4',
-        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Produto-personalizado-Dia-das-Maes.JPG',
+        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Embalagem-E-Porta-Joias-Para-Dia-Das-Maes.jpg',
         altText: 'Lembrancinha de Dia das Maes para empresas - item 4',
+      },
+      {
+        name: 'Item 5',
+        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Lembrancinha-Elastico-Beach-Tennis.jpg',
+        altText: 'Lembrancinha de Dia das Maes para empresas - item 5',
+      },
+      {
+        name: 'Item 6',
+        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Mini-Lixa-Dia-Das-Mulheres-Lembrancinha.JPG',
+        altText: 'Lembrancinha de Dia das Maes para empresas - item 6',
+      },
+      {
+        name: 'Item 7',
+        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Garrafa-Plastica-Mimo-Para-Elas.jpg',
+        altText: 'Lembrancinha de Dia das Maes para empresas - item 7',
+      },
+      {
+        name: 'Item 8',
+        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Necessaire-De-Bolsa-Olho-Grego.png',
+        altText: 'Lembrancinha de Dia das Maes para empresas - item 8',
+      },
+      {
+        name: 'Item 9',
+        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Gloss-Lembrancinha-Dia-das-Maes.JPG',
+        altText: 'Lembrancinha de Dia das Maes para empresas - item 9',
+      },
+      {
+        name: 'Item 10',
+        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Necessaire-personalizada-com-logo-e-frase-Dia-das-Maes.jpg',
+        altText: 'Lembrancinha de Dia das Maes para empresas - item 10',
+      },
+      {
+        name: 'Item 11',
+        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/LipGloss.JPG',
+        altText: 'Lembrancinha de Dia das Maes para empresas - item 11',
+      },
+      {
+        name: 'Item 12',
+        imageUrl: '/images/dia-das-maes-lembrancinha-empresas/Produto-personalizado-Dia-das-Maes.JPG',
+        altText: 'Lembrancinha de Dia das Maes para empresas - item 12',
       },
     ],
   },
@@ -116,23 +155,63 @@ export const landingPages: LandingPageData[] = [
     carrossel: [
       {
         name: 'Item 1',
-        imageUrl: '/images/dia-das-maes-brindes-corporativos/Espelinho-de-bolsa-com-nome-e-logo-personalizado.JPG',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Garrafa-Termica-Com-Nome-E-Logo-Mulheres.jpg',
         altText: 'Brindes corporativos para o Dia das Mães - item 1',
       },
       {
         name: 'Item 2',
-        imageUrl: '/images/dia-das-maes-brindes-corporativos/Necessaire-Dia-das-Maes-Personalizada.jpg',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Espelinho-de-bolsa-com-nome-e-logo-personalizado.JPG',
         altText: 'Brindes corporativos para o Dia das Mães - item 2',
       },
       {
         name: 'Item 3',
-        imageUrl: '/images/dia-das-maes-brindes-corporativos/Brinde-para-as-maes-lenço-personalizado.jpg',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Garrafa-Plastica-Mimo-Para-Elas.jpg',
         altText: 'Brindes corporativos para o Dia das Mães - item 3',
       },
       {
         name: 'Item 4',
-        imageUrl: '/images/dia-das-maes-brindes-corporativos/Lembrancinha-personalizada-para-as-maes.JPG',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Necessaire-delicada-dia-das-maes-com-logo.jpg',
         altText: 'Brindes corporativos para o Dia das Mães - item 4',
+      },
+      {
+        name: 'Item 5',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Necessaire-Com-Iniciais-Brindes.png',
+        altText: 'Brindes corporativos para o Dia das Mães - item 5',
+      },
+      {
+        name: 'Item 6',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Necessaire-para-bolsa-dia-das-maes-brinde.jpg',
+        altText: 'Brindes corporativos para o Dia das Mães - item 6',
+      },
+      {
+        name: 'Item 7',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Brinde-para-as-maes-lenço-personalizado.jpg',
+        altText: 'Brindes corporativos para o Dia das Mães - item 7',
+      },
+      {
+        name: 'Item 8',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Produto-personalizado-Dia-das-Maes.JPG',
+        altText: 'Brindes corporativos para o Dia das Mães - item 8',
+      },
+      {
+        name: 'Item 9',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Gloss-lembrancinha-personalizada.jpg',
+        altText: 'Brindes corporativos para o Dia das Mães - item 9',
+      },
+      {
+        name: 'Item 10',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Mini-Lixa-Dia-Das-Mulheres-Lembrancinha 2.JPG',
+        altText: 'Brindes corporativos para o Dia das Mães - item 10',
+      },
+      {
+        name: 'Item 11',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Lembrancinha-Elastico-Beach-Tennis.jpg',
+        altText: 'Brindes corporativos para o Dia das Mães - item 11',
+      },
+      {
+        name: 'Item 12',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/Lembrancinha-personalizada-para-as-maes.JPG',
+        altText: 'Brindes corporativos para o Dia das Mães - item 12',
       },
     ],
   },
