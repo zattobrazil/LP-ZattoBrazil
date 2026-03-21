@@ -185,7 +185,7 @@ export const landingPages: LandingPageData[] = [
       },
       {
         name: 'Item 7',
-        imageUrl: '/images/dia-das-maes-brindes-corporativos/Brinde-para-as-maes-lenço-personalizado.jpg',
+        imageUrl: '/images/dia-das-maes-brindes-corporativos/brinde-para-as-maes-lenco-personalizado.png',
         altText: 'Brindes corporativos para o Dia das Mães - item 7',
       },
       {
