@@ -2,21 +2,23 @@ import type { Metadata } from 'next';
 import { readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { notFound } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { getAllSlugs, getCatalogLinkBySlug, getLandingPageBySlug } from '@/data/lps';
 
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import BannerCTA from '@/components/BannerCTA';
-import Clients from '@/components/Clients';
-import CatalogueCarousel from '@/components/CatalogueCarousel';
-import BrandPositioning from '@/components/BrandPositioning';
-import Journey from '@/components/Journey';
-import Stats from '@/components/Stats';
-import FifteenYears from '@/components/FifteenYears';
-import Testimonials from '@/components/Testimonials';
-import InstagramSection from '@/components/InstagramSection';
-import Footer from '@/components/Footer';
 import Script from 'next/script';
+
+const Clients = dynamic(() => import('@/components/Clients'));
+const CatalogueCarousel = dynamic(() => import('@/components/CatalogueCarousel'));
+const Journey = dynamic(() => import('@/components/Journey'));
+const BrandPositioning = dynamic(() => import('@/components/BrandPositioning'));
+const Stats = dynamic(() => import('@/components/Stats'));
+const FifteenYears = dynamic(() => import('@/components/FifteenYears'));
+const Testimonials = dynamic(() => import('@/components/Testimonials'));
+const InstagramSection = dynamic(() => import('@/components/InstagramSection'));
+const Footer = dynamic(() => import('@/components/Footer'));
 
 interface SlugPageProps {
   params: {
@@ -117,7 +119,7 @@ export default async function LandingPageDinamica({ params }: SlugPageProps) {
 
   return (
     <main className="min-h-screen bg-[#fcf9f4] text-[#213655]">
-      <h1 className="sr-only">{lpData.metaTitle}</h1>
+      <h1 className="sr-only text-black">{lpData.metaTitle}</h1>
       <Script
         id={`schema-lp-${lpData.slug}`}
         type="application/ld+json"

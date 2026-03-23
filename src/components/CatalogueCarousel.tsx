@@ -151,6 +151,7 @@ export default function CatalogueCarousel({ items, catalogLink = DEFAULT_CATALOG
                   src={encodeURI(item.imageUrl)}
                   alt={item.altText || item.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
                   style={{ objectPosition: getObjectPosition(item) }}
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />

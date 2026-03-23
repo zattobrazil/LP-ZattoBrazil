@@ -78,6 +78,8 @@ export default function Clients({ logos }: ClientsProps) {
     return { width: 180, height: 100 };
   };
 
+  const getLogoSizes = (width: number) => `(max-width: 768px) 50vw, ${width}px`;
+
   return (
     <section id="clientes" className="bg-[#fcf9f4] py-16">
       <h2 className="font-serif text-2xl tracking-tight text-[#213655] text-center mb-12">
@@ -86,28 +88,38 @@ export default function Clients({ logos }: ClientsProps) {
 
       <div className="grid grid-cols-2 gap-y-10 gap-x-6 px-6 md:flex md:flex-row md:flex-wrap md:justify-center md:gap-12">
         {isDynamic
-          ? logos!.map((client) => (
-              <Image
-                key={client.url}
-                src={client.url}
-                alt={client.altText}
-                width={getLogoSize(client.url, client.size).width}
-                height={getLogoSize(client.url, client.size).height}
-                className="object-contain justify-self-center"
-                style={shouldUseBlueFilter(client.url) ? { filter: blueBrandFilter } : undefined}
-              />
-            ))
-          : clients.map((client) => (
-              <Image
-                key={client.src}
-                src={client.src}
-                alt={`Logo do cliente ${client.name}`}
-                width={getLogoSize(client.src, client.size).width}
-                height={getLogoSize(client.src, client.size).height}
-                className={`object-contain justify-self-center ${mobileOrderByName[client.name] ?? ''} md:order-none`}
-                style={shouldUseBlueFilter(client.src) ? { filter: blueBrandFilter } : undefined}
-              />
-            ))}
+          ? logos!.map((client) => {
+              const logoSize = getLogoSize(client.url, client.size);
+
+              return (
+                <Image
+                  key={client.url}
+                  src={client.url}
+                  alt={client.altText}
+                  width={logoSize.width}
+                  height={logoSize.height}
+                  sizes={getLogoSizes(logoSize.width)}
+                  className="object-contain justify-self-center"
+                  style={shouldUseBlueFilter(client.url) ? { filter: blueBrandFilter } : undefined}
+                />
+              );
+            })
+          : clients.map((client) => {
+              const logoSize = getLogoSize(client.src, client.size);
+
+              return (
+                <Image
+                  key={client.src}
+                  src={client.src}
+                  alt={`Logo do cliente ${client.name}`}
+                  width={logoSize.width}
+                  height={logoSize.height}
+                  sizes={getLogoSizes(logoSize.width)}
+                  className={`object-contain justify-self-center ${mobileOrderByName[client.name] ?? ''} md:order-none`}
+                  style={shouldUseBlueFilter(client.src) ? { filter: blueBrandFilter } : undefined}
+                />
+              );
+            })}
       </div>
     </section>
   );
