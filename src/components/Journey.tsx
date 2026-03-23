@@ -35,7 +35,7 @@ export default function Journey() {
       <div className="hidden md:block relative max-w-7xl mx-auto aspect-[21/9] overflow-visible">
         {/* Imagem do infográfico */}
         <Image
-          src="/images/jornada.png"
+          src="/images/jornada.png?v=novo" 
           alt="Gráfico da Jornada do Cliente"
           width={1920}
           height={800}
