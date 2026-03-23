@@ -174,6 +174,7 @@ export default function Footer({
             src="/images/Zatto200.svg"
             alt="Zatto Brazil"
             fill
+            sizes="100vw"
             className="object-cover object-top md:object-[center_7%] opacity-100"
             style={{ filter: 'brightness(0) saturate(100%) invert(18%) sepia(23%) saturate(1282%) hue-rotate(171deg) brightness(95%) contrast(93%)' }}
           />
