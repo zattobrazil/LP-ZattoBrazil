@@ -239,6 +239,7 @@ export default function Testimonials() {
                           alt={`Logo ${testimonial.brand}`}
                           height={testimonial.brand === 'Octapharma' ? 26 : testimonial.logo.includes('cliente-fz') ? 16 : 20}
                           width={testimonial.brand === 'Octapharma' ? 72 : testimonial.logo.includes('cliente-fz') ? 40 : 50}
+                          sizes="(max-width: 768px) 30vw, 72px"
                           className="object-contain"
                         />
                       </div>

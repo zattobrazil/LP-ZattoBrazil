@@ -23,6 +23,7 @@ const helveticaNow = localFont({
   ],
   variable: '--font-helvetica-now',
   display: 'swap',
+  preload: true,
 });
 
 /**

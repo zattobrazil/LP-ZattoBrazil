@@ -52,6 +52,7 @@ export default function InstagramSection() {
                 src={post.image}
                 alt={post.alt}
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </a>
