@@ -16,6 +16,7 @@ export default function FifteenYears({
         src="/images/kit-bolsa-e-necessaire-octapharma.jpg"
         alt="15 anos produzindo brindes"
         fill
+        sizes="100vw"
         className="object-cover z-0 brightness-75"
       />
 

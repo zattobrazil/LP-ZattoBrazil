@@ -24,6 +24,7 @@ export default function BrandPositioning() {
           src="/images/posicionamento.webp"
           alt="Bastidores de produção Zatto"
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover object-[center_35%] grayscale"
         />
       </div>
