@@ -21,7 +21,7 @@ export default function Hero({
           alt="Imagem de destaque da Zatto Brazil"
           fill
           priority={true}
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 100vw"
           className="object-cover object-center"
         />
       </motion.div>

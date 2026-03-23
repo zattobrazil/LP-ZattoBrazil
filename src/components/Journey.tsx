@@ -39,7 +39,8 @@ export default function Journey() {
           alt="Gráfico da Jornada do Cliente"
           width={1920}
           height={800}
-          className="w-full h-full object-contain object-center px-16"
+          sizes="(max-width: 768px) 100vw, 80vw"
+          className="w-full h-full object-contain object-center md:px-16 px-6"
         />
 
         {/* Título no canto superior direito */}
