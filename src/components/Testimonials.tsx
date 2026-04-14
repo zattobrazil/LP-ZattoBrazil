@@ -72,7 +72,7 @@ const testimonials = [
   {
     id: 8,
     greeting: 'Seu nome foi citado aqui na reunião de MKT,',
-    text: 'Você trouxe um arsenal de coisas diferentes que dá pra personalizar, chaveiro, copo etc. que daria pra usar como brindes. Eles amaram a iniciativa e que temos que retomar mais brindes diferentes, com referências internacionais. Pois o direcional e ter brindes fora da caixa, diferentes, que não tem no mercado, pra inovar mesmo.',
+    text: 'Você trouxe um arsenal de coisas diferentes que dá pra personalizar, chaveiro, copo etc. que daria pra usar como brindes. Eles amaram a iniciativa!',
     location: 'São Paulo - São Paulo',
     brand: 'Ollie',
     logo: '/images/clientes/cliente-ollie.webp',

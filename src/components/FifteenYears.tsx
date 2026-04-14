@@ -14,7 +14,7 @@ export default function FifteenYears({
       {/* Fundo */}
       <Image
         src="/images/kit-bolsa-e-necessaire-octapharma.jpg"
-        alt="15 anos produzindo brindes"
+        alt="19 anos produzindo brindes"
         fill
         sizes="100vw"
         className="object-cover z-0 brightness-75"
@@ -28,7 +28,7 @@ export default function FifteenYears({
         {/* Coluna da Esquerda - Título */}
         <div className="flex flex-col items-start gap-10 md:gap-24">
           <h2 className="font-serif text-white text-3xl md:text-5xl lg:text-5xl leading-tight">
-            15 ANOS<br />PRODUZINDO<br />BRINDES E<br />IMPULSIONADORES
+            19 ANOS<br />PRODUZINDO<br />BRINDES E<br />IMPULSIONADORES
           </h2>
           <a
             href={catalogLink}
